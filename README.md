@@ -1,6 +1,30 @@
-# PromptWork
+# PromptWork - 1000 Professional AI Prompts Collection
 
-A minimal, parsimonious web project following first principles design.
+A professional landing page showcasing the 1000 Professional AI Prompts Collection, a comprehensive reference designed for high-precision, sophisticated AI interactions.
+
+## About the Collection
+
+The 1000 Professional AI Prompts Collection is unlike static prompt lists. It provides a structural framework using dynamic placeholders (e.g., {topic}, {audience}, {stakeholders}) to ensure every response is tailored to your specific project.
+
+### Key Features
+
+- **Operational Constraints**: Prompts designed to accept time, budget, and format constraints
+- **Deep Analytical Frameworks**: Built-in SWOT analyses, First Principles rebuilding, and Porter's Five Forces
+- **Problem Diagnosis**: Advanced troubleshooting with 5 Whys methodology
+- **Broad Domain Coverage**: 1,000 prompts across 10 professional sections
+
+### The 10 Professional Sections
+
+1. **Analysis & Research** - Critical thinking and research synthesis
+2. **Creative Generation** - Ideation and professional storytelling
+3. **Problem-Solving** - Optimization and decision frameworks
+4. **Communication** - Audience adaptation and negotiation
+5. **Learning & Teaching** - Curriculum and mastery design
+6. **Business Strategy** - Modeling and operations
+7. **Marketing & Sales** - Brand messaging and conversion
+8. **Coding & Engineering** - Software design and LLM integration
+9. **Career & Leadership** - Management and team development
+10. **Personal Productivity** - Systems and life admin
 
 ## Project Architecture
 
@@ -8,7 +32,7 @@ This project follows a minimal setup approach with the following structure:
 
 ```
 PromptWork/
-├── index.html          # Main entry point (root directory)
+├── index.html          # Main landing page
 ├── README.md           # Project documentation
 └── assets/             # Optional: Images, icons, and mockups (when needed)
 ```
