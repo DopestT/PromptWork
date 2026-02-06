@@ -33,11 +33,8 @@ PromptWork/
 
 3. **Optional: Use a local server** (for testing):
    ```bash
-   # Using Python 3
+   # Using Python
    python3 -m http.server 8000
-   
-   # Using Python 2
-   python -m SimpleHTTPServer 8000
    
    # Using Node.js (if you have npx)
    npx http-server
