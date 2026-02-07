@@ -1,228 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PromptWorks | 1000 Professional AI Prompts + Section 1001 Bonus</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
-body { font-family: 'Inter', sans-serif; }
-.mono { font-family: 'JetBrains Mono', monospace; }
-.copy-toast {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #0f172a;
-    color: #f8fafc;
-    padding: 14px 28px;
-    border-radius: 12px;
-    font-weight: 600;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
-    z-index: 100;
-    border: 1px solid #334155;
-}
-.gradient-bg {
-    background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%);
-}
-.glow-btn {
-    box-shadow: 0 0 20px #3b82f6aa, 0 0 40px #3b82f6aa;
-    animation: pulse 2s infinite;
-}
-@keyframes pulse {
-    0%,100%{ box-shadow: 0 0 20px #3b82f6aa, 0 0 40px #3b82f6aa; }
-    50%{ box-shadow: 0 0 40px #3b82f6ff, 0 0 60px #3b82f6ff; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptWorks | Section 1001 — The Updated Book</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .copy-toast {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            border: 1px solid #334155;
+        }
+        .gradient-bg {
+            background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%);
+        }
+        .glow-button {
+            box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.5), 0 0 20px 5px rgba(59, 130, 246, 0.3);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.5), 0 0 20px 5px rgba(59, 130, 246, 0.3);}
+            50% { box-shadow: 0 0 15px 4px rgba(59, 130, 246, 0.7), 0 0 25px 8px rgba(59, 130, 246, 0.4);}
+        }
+        .typing { border-right: .15em solid #2563eb; white-space: nowrap; overflow: hidden;}
+    </style>
 </head>
 <body class="gradient-bg text-slate-900 selection:bg-blue-100">
 
-<div id="copyToast" class="copy-toast italic">Copied to clipboard!</div>
+    <div id="copyToast" class="copy-toast italic">Copied to clipboard!</div>
 
-<!-- NAV -->
-<nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
-    <div class="text-2xl font-extrabold tracking-tighter text-slate-900 flex items-center gap-2">
-        <span class="bg-blue-600 text-white px-2 py-1 rounded">PW</span> PromptWorks
-    </div>
-    <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-600 transition-all text-sm shadow-lg shadow-blue-500/10 glow-btn">Get the Guide — $29</a>
-</nav>
+    <!-- Navigation -->
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-2xl font-extrabold tracking-tighter text-slate-900 flex items-center gap-2">
+            <span class="bg-blue-600 text-white px-2 py-1 rounded">PW</span> PromptWorks
+        </div>
+        <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="glow-button bg-blue-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-700 transition-all text-sm shadow-lg shadow-blue-500/10">Get the Collection — $29</a>
+    </nav>
 
-<!-- HERO -->
-<header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center relative">
-    <h1 class="text-6xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight text-slate-900">
-        STOP ASKING. <br>
-        <span class="text-blue-600">COMMAND.</span>
-    </h1>
-    <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed font-medium border-l-4 border-blue-600 pl-6 italic">
-        "The generic prompt is dead. We built the funeral. 1,000 precision architectures for those who refuse to settle for 'AI Fluff'."
-    </p>
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-blue-700 shadow-2xl shadow-blue-500/30 transition-all hover:-translate-y-1 glow-btn">
-            Download PromptWorks — $29
-        </a>
-        <a href="#samples" class="bg-white text-slate-900 border border-slate-200 px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-slate-50 transition">View Samples</a>
-    </div>
-</header>
+    <!-- Hero Section -->
+    <header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center">
+        <h1 class="text-6xl lg:text-9xl font-black mb-8 leading-none tracking-tighter typing">
+            STOP ASKING. <br>
+            <span class="text-blue-600">COMMAND.</span>
+        </h1>
+        <p class="text-xl text-slate-500 max-w-xl mx-auto mb-12 font-medium border-l-4 border-blue-600 pl-6 italic">
+            "The generic prompt is dead. We built the funeral. 1,000 precision architectures for those who refuse to settle for 'AI Fluff'."
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="glow-button bg-blue-600 text-white px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-blue-700 shadow-2xl shadow-blue-500/30 transition-all hover:-translate-y-1">Download PromptWorks — $29</a>
+            <a href="#section1001" class="bg-white text-slate-900 border border-slate-200 px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-slate-50 transition">View Section 1001</a>
+        </div>
+    </header>
 
-<!-- FLUFF VS ARCHITECT -->
-<section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12">
-    <div class="bg-gray-200/50 blur-sm p-10 rounded-3xl flex items-center justify-center">
-        <p class="text-gray-600 text-xl italic text-center">"Write a business plan for a coffee shop."</p>
-    </div>
-    <div class="bg-blue-900/80 border-2 border-blue-500 rounded-3xl p-10 text-blue-100 font-mono">
-        <p class="text-xl"><strong>[Role: Senior Strategist]</strong> + <strong>[Framework: SWOT]</strong> + <strong>[Constraint: Zero Fluff]</strong>... Deployable, structured, actionable.</p>
-    </div>
-</section>
+    <!-- Logic vs Fluff Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+        <div class="p-8 bg-slate-100/40 blur-sm rounded-3xl">
+            <h2 class="text-2xl font-bold mb-4 text-slate-500">The Fluff</h2>
+            <p class="text-slate-400 italic">"Write a business plan for a coffee shop."</p>
+        </div>
+        <div class="p-8 bg-slate-900/50 border border-blue-600 rounded-3xl text-blue-300 shadow-lg">
+            <h2 class="text-2xl font-bold mb-4 text-blue-400">The Architect</h2>
+            <p class="mono text-sm leading-relaxed">
+                [Role: Senior Strategist] + [Framework: SWOT] + [Constraint: Zero Fluff] + [Goal: Optimize ROI]...
+            </p>
+        </div>
+    </section>
 
-<!-- FEATURES GRID -->
-<section id="features" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
-    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-        <div class="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition">
-            <h3 class="font-bold text-sm text-blue-600 mb-2">01. Analysis</h3>
-            <p class="text-xs text-slate-500">SWOT, First Principles, and Assumptions.</p>
+    <!-- Section 1001 — Book Upgrade -->
+    <section id="section1001" class="max-w-5xl mx-auto px-6 py-24 bg-white rounded-[3rem] shadow-lg border border-slate-100">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-black mb-4">Section 1001: The Updated Book</h2>
+            <p class="text-slate-500 max-w-xl mx-auto">Learn the art of building AI prompts like a professional architect. This is an upgrade to "The Prompt Hustle" with the complete God-Mode Chain.</p>
         </div>
-        <div class="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition">
-            <h3 class="font-bold text-sm text-blue-600 mb-2">02. Creative</h3>
-            <p class="text-xs text-slate-500">Ideation, SCAMPER, and Narrative.</p>
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+            <div class="lg:w-1/2 w-full">
+                <img src="https://drive.google.com/uc?export=view&id=1e81t688vpgY2aoz5QAYxqg03Osf_sbr8" alt="The Prompt Hustle Book Cover" class="w-full h-full object-cover rounded-2xl shadow-xl">
+            </div>
+            <div class="lg:w-1/2 w-full">
+                <h3 class="text-2xl font-bold mb-4">Unlock the God-Mode Chain</h3>
+                <p class="text-slate-600 mb-6 leading-relaxed italic">
+                    This section teaches the exact frameworks, placeholders, and constraints professionals use to get precise, actionable AI outputs every time. No fluff — all architecture.
+                </p>
+                <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="glow-button inline-block bg-blue-600 text-white px-12 py-4 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-2xl shadow-blue-500/30">Download Section 1001 — $29</a>
+                <p class="mt-4 text-xs text-slate-400 italic">Includes the secret God-Mode Chain and professional prompt templates.</p>
+            </div>
         </div>
-        <div class="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition">
-            <h3 class="font-bold text-sm text-blue-600 mb-2">03. Optimization</h3>
-            <p class="text-xs text-slate-500">ROI, Systems, and Problem Design.</p>
-        </div>
-        <div class="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition">
-            <h3 class="font-bold text-sm text-blue-600 mb-2">04. Persuasion</h3>
-            <p class="text-xs text-slate-500">Negotiation, Conflict, and Pitching.</p>
-        </div>
-        <div class="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition">
-            <h3 class="font-bold text-sm text-blue-600 mb-2">05. Learning</h3>
-            <p class="text-xs text-slate-500">Curriculum Design and Concept Mastery.</p>
-        </div>
-        <div class="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition">
-            <h3 class="font-bold text-sm text-blue-600 mb-2">06. Strategy</h3>
-            <p class="text-xs text-slate-500">Modeling, Ops, and Market Forces.</p>
-        </div>
-        <div class="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition">
-            <h3 class="font-bold text-sm text-blue-600 mb-2">07. Marketing</h3>
-            <p class="text-xs text-slate-500">Brand, Conversion, and Funnels.</p>
-        </div>
-        <div class="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition">
-            <h3 class="font-bold text-sm text-blue-600 mb-2">08. Engineering</h3>
-            <p class="text-xs text-slate-500">APIs, Debugging, and System Specs.</p>
-        </div>
-        <div class="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition">
-            <h3 class="font-bold text-sm text-blue-600 mb-2">09. Career</h3>
-            <p class="text-xs text-slate-500">Leadership, Teams, and Management.</p>
-        </div>
-        <div class="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition">
-            <h3 class="font-bold text-sm text-blue-600 mb-2">10. Personal</h3>
-            <p class="text-xs text-slate-500">Logistics, Life Ops, and Reflection.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- SAMPLE PROMPTS -->
-<section id="samples" class="max-w-7xl mx-auto px-6 py-24 bg-white rounded-[3rem] shadow-sm border border-slate-100">
-    <div class="text-center mb-16">
-        <h2 class="text-4xl font-black mb-4">Sample the Logic</h2>
-        <p class="text-slate-500">Click any card to copy the professional prompt structure.</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <button onclick="copySample(this)" class="group text-left p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition-all">
-            <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Root Cause Analysis</span>
-            <p class="text-slate-700 font-medium italic mb-4">"Use the 5 Whys framework to diagnose root causes of {problem}; propose interventions at each layer of the causal chain."</p>
-            <div class="text-xs font-bold text-blue-600 opacity-0 group-hover:opacity-100 transition">CLICK TO COPY</div>
-        </button>
-        <button onclick="copySample(this)" class="group text-left p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition-all">
-            <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Business Modeling</span>
-            <p class="text-slate-700 font-medium italic mb-4">"Draft a business model canvas for {venture}; include core assumptions, value chain mapping, and validation tests."</p>
-            <div class="text-xs font-bold text-blue-600 opacity-0 group-hover:opacity-100 transition">CLICK TO COPY</div>
-        </button>
-        <button onclick="copySample(this)" class="group text-left p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition-all">
-            <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Engineering Specs</span>
-            <p class="text-slate-700 font-medium italic mb-4">"Design a system architecture for {feature} that optimizes for {constraint}; include API specs and error-handling logic."</p>
-            <div class="text-xs font-bold text-blue-600 opacity-0 group-hover:opacity-100 transition">CLICK TO COPY</div>
-        </button>
-    </div>
-</section>
-
-<!-- SECTION 1001 - GOD-MODE BONUS -->
-<section id="section-1001" class="relative max-w-7xl mx-auto px-6 py-32 rounded-3xl overflow-hidden text-white bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 shadow-2xl">
-  <div class="absolute top-8 right-8 bg-yellow-400 text-black font-bold px-4 py-2 rounded-full shadow-lg animate-pulse z-20">
-    GOD-MODE BONUS
-  </div>
-  <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-    <div class="space-y-6">
-      <h2 class="text-4xl lg:text-5xl font-black text-yellow-400">Section 1001: God-Mode Prompt Mastery</h2>
-      <p class="text-blue-100 text-lg leading-relaxed">
-        Upgrade your learning from <span class="font-bold text-white">The Prompt Hustle</span>. Section 1001 gives hands-on, zero-fluff strategies to master AI prompts like a professional strategist.
-      </p>
-      <ul class="space-y-2 text-blue-200 text-sm list-disc pl-5">
-        <li>✓ Turn book strategies into fully deployable AI prompts</li>
-        <li>✓ Step-by-step frameworks for chaining prompts and resolving placeholders</li>
-        <li>✓ Monetization and niche strategies distilled into actionable workflows</li>
-      </ul>
-      <a href="https://www.amazon.com/Prompt-Hustle-MAKE-100-PROMPTS-ebook/dp/B0FW5KSWKK" target="_blank" class="mt-6 inline-block bg-yellow-400 text-black font-bold px-10 py-4 rounded-3xl text-lg shadow-2xl hover:scale-105 transition-all">
-        View the Book on Amazon
-      </a>
-    </div>
-    <div class="flex justify-center lg:justify-end">
-      <div class="relative w-64 h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-400">
-        <img src="YOUR_BOOK_COVER_URL_HERE" alt="The Prompt Hustle Book Cover" class="w-full h-full object-cover">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 text-xs text-white font-bold">Book + Section 1001 Integration</div>
-      </div>
-    </div>
-  </div>
-  <p class="mt-12 text-center text-blue-200 text-xs italic">
-    Combine your reading with Section 1001 to turn prompts into deployable strategies immediately.
-  </p>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="max-w-7xl mx-auto px-6 py-24 bg-slate-50/50">
-  <div class="text-center mb-16">
-    <h2 class="text-4xl font-black mb-4 text-slate-900">Vetted by Professionals</h2>
-    <p class="text-slate-500">How the top 1% are architecting their workflows.</p>
-  </div>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-      <div class="flex gap-1 text-blue-500 mb-4 text-sm">★★★★★</div>
-      <p class="text-slate-600 italic mb-6">"The SWOT and First Principles prompts in Section 1 saved me 10+ hours this week. This isn't a list; it's a logic system."</p>
-      <div class="flex items-center gap-3 border-t pt-6 border-slate-50">
-        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-600 text-xs">JD</div>
-        <div>
-          <p class="text-sm font-bold text-slate-900">James D.</p>
-          <p class="text-xs text-slate-400">Strategy Consultant</p>
+    <!-- CTA Section -->
+    <section class="max-w-4xl mx-auto px-6 py-32 text-center">
+        <h2 class="text-5xl font-black mb-8">Own the System.</h2>
+        <p class="text-xl text-slate-500 mb-12 leading-relaxed">Join thousands of professionals using PromptWorks to turn AI from a novelty into a high-precision strategic asset.</p>
+        <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="glow-button inline-block bg-blue-600 text-white px-16 py-7 rounded-2xl text-2xl font-black hover:bg-blue-700 shadow-3xl shadow-blue-500/40 transition-all hover:scale-105 active:scale-95">Download PDF — $29</a>
+        <div class="mt-12 flex justify-center gap-8 opacity-40 grayscale">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" class="h-6">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="h-6">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="h-6">
         </div>
-      </div>
-    </div>
-    <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-      <div class="flex gap-1 text-blue-500 mb-4 text-sm">★★★★★</div>
-      <p class="text-slate-600 italic mb-6">"Finally, prompts that don't sound like 'AI fluff.' The placeholders for my engineering specs have made my outputs actually deployable."</p>
-      <div class="flex items-center gap-3 border-t pt-6 border-slate-50">
-        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center font-bold text-indigo-600 text-xs">SK</div>
-        <div>
-          <p class="text-sm font-bold text-slate-900">Sarah K.</p>
-          <p class="text-xs text-slate-400">Senior Dev @ TechCorp</p>
-        </div>
-      </div>
-    </div>
-    <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-      <div class="flex gap-1 text-blue-500 mb-4 text-sm">★★★★★</div>
-      <p class="text-slate-600 italic mb-6">"I've bought other packs before, but they were junk. PromptWorks focuses on structural rigor and constraints. Essential."</p>
-      <div class="flex items-center gap-3 border-t pt-6 border-slate-50">
-        <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-600 text-xs">ML</div>
-        <div>
-          <p class="text-sm font-bold text-slate-900">Marcus L.</p>
-          <p class="text-xs text-slate-400">Founder & Indie Hacker</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FINAL CTA -->
-<section class="max-w-4xl mx-auto px-6 py-32 text-center">
-  <h2 class="text-5xl font-black mb-8">Own the System.</h2>
-  <p class="text-xl
+    <!-- Footer -->
+    <footer class="p-12 text-center text-slate-400 text-xs border-t border-slate-200">
+        &copy; 2026 PromptWorks. All Rights Reserved. Instant Delivery via Stripe Secure.
+    </footer>
+
+    <script>
+        // Toast Copy
+        function showToast() {
+            const toast = document.getElementById('copyToast');
+            toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 2500);
+        }
+
+        function copySample(button) {
+            const text = button.querySelector('p').innerText;
+            navigator.clipboard.writeText(text).then(showToast);
+        }
+
+        function copyMetaPrompt() {
+            const text = document.getElementById('metaPrompt').innerText;
+            navigator.clipboard.writeText(text).then(showToast);
+        }
+
+        // Typing effect
+        const typingEl = document.querySelector('.typing');
+        const txt = 'Architecting [Strategy], [Code], [Marketing].';
+        let i = 0;
+        setInterval(() => {
+            typingEl.innerHTML = 'STOP ASKING. <br><span class="text-blue-600">COMMAND.</span><br>' + txt.slice(0, i);
+            i = (i + 1) % (txt.length + 1);
+        }, 100);
+    </script>
+</body>
+</html>
