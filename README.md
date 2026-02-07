@@ -59,11 +59,11 @@ PromptWork/
    ```bash
    # Using Python
    python3 -m http.server 8000
-   
+
    # Using Node.js (if you have npx)
    npx http-server
    ```
-   
+
    Then open `http://localhost:8000` in your browser.
 
 ## Usage Examples
