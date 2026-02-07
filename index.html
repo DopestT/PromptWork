@@ -43,8 +43,6 @@ body { font-family: 'Inter', sans-serif; margin:0; padding:0; }
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 2rem;
     transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
 }
 .glass-card:hover {
     transform: translateY(-5px);
@@ -102,7 +100,6 @@ body { font-family: 'Inter', sans-serif; margin:0; padding:0; }
 
 <div id="copyToast" class="copy-toast italic">Copied to clipboard!</div>
 
-<!-- Container Wrapper -->
 <div class="max-w-7xl mx-auto px-6">
 
 <!-- Navigation -->
@@ -150,7 +147,7 @@ body { font-family: 'Inter', sans-serif; margin:0; padding:0; }
         <h2 class="text-4xl font-black mb-4">Section 1001: The Updated Book</h2>
         <p class="text-slate-500 max-w-xl mx-auto">Learn the art of building AI prompts like a professional architect. This is an upgrade to "The Prompt Hustle" with the complete God-Mode Chain.</p>
     </div>
-    <div class="flex flex-col lg:flex-row gap-12 items-center">
+    <div class="flex flex-col lg:flex-row gap-12 items-center mb-16">
         <div class="lg:w-1/2 w-full">
             <img src="images/book-cover.png" alt="The Prompt Hustle Book Cover" class="w-full h-full object-cover rounded-2xl shadow-xl">
         </div>
@@ -166,6 +163,27 @@ body { font-family: 'Inter', sans-serif; margin:0; padding:0; }
             <p class="mt-4 text-xs text-slate-400 italic">Professional prompt templates included.</p>
         </div>
     </div>
+
+    <!-- Interactive Prompt Sample Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <button onclick="copySample(this)" class="group text-left p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition-all">
+            <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Root Cause Analysis</span>
+            <p class="text-slate-700 font-medium italic mb-4">"Use the 5 Whys framework to diagnose root causes of {problem}; propose interventions at each layer of the causal chain."</p>
+            <div class="text-xs font-bold text-blue-600 opacity-0 group-hover:opacity-100 transition">CLICK TO COPY</div>
+        </button>
+
+        <button onclick="copySample(this)" class="group text-left p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition-all">
+            <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Business Modeling</span>
+            <p class="text-slate-700 font-medium italic mb-4">"Draft a business model canvas for {venture}; include core assumptions, value chain mapping, and validation tests."</p>
+            <div class="text-xs font-bold text-blue-600 opacity-0 group-hover:opacity-100 transition">CLICK TO COPY</div>
+        </button>
+
+        <button onclick="copySample(this)" class="group text-left p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition-all">
+            <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Engineering Specs</span>
+            <p class="text-slate-700 font-medium italic mb-4">"Design a system architecture for {feature} that optimizes for {constraint}; include API specs and error-handling logic."</p>
+            <div class="text-xs font-bold text-blue-600 opacity-0 group-hover:opacity-100 transition">CLICK TO COPY</div>
+        </button>
+    </div>
 </section>
 
 <!-- Footer -->
@@ -176,13 +194,6 @@ body { font-family: 'Inter', sans-serif; margin:0; padding:0; }
 </div> <!-- End Container Wrapper -->
 
 <script>
-// Copy functionality
-function showToast() {
-    const toast = document.getElementById('copyToast');
-    toast.style.display = 'block';
-    setTimeout(() => { toast.style.display = 'none'; }, 2500);
-}
-
 // Scroll fade-in
 const faders = document.querySelectorAll('[data-fade]');
 function checkFade() {
@@ -194,7 +205,7 @@ function checkFade() {
 window.addEventListener('scroll', checkFade);
 checkFade();
 
-// Hero CTA click spark
+// Hero CTA spark effect
 const heroBtn = document.querySelector('.hero-cta');
 heroBtn.addEventListener('click', function(e) {
     const spark = document.createElement('span');
@@ -205,6 +216,17 @@ heroBtn.addEventListener('click', function(e) {
     spark.style.animation = 'spark-expand 0.6s ease-out forwards';
     setTimeout(() => { spark.remove(); }, 600);
 });
+
+// Copy prompt sample
+function showToast() {
+    const toast = document.getElementById('copyToast');
+    toast.style.display = 'block';
+    setTimeout(() => { toast.style.display = 'none'; }, 2500);
+}
+function copySample(button) {
+    const text = button.querySelector('p').innerText;
+    navigator.clipboard.writeText(text).then(showToast);
+}
 </script>
 </body>
 </html>
