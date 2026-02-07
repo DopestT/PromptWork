@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success | Welcome to PromptWorks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-blue-100">
+
+    <div class="max-w-3xl mx-auto px-6 py-20 text-center">
+        <div class="mb-8 inline-flex items-center justify-center w-20 h-20 bg-green-100 text-green-600 rounded-full">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        
+        <h1 class="text-4xl font-black mb-4 tracking-tight">Payment Successful!</h1>
+        <p class="text-slate-600 text-lg mb-12">Your journey to sophisticated AI results starts now.</p>
+
+        <div class="bg-white border border-slate-200 p-8 rounded-3xl shadow-sm mb-8 text-left">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span>
+                Download Your Collection
+            </h2>
+            <p class="text-slate-500 text-sm mb-6">Access the full PDF containing 1,000 professional prompts across 10 domains.</p>
+            <a href="YOUR_PDF_LINK_HERE" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-500/20">Download PDF Guide</a>
+        </div>
+
+        <div class="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl text-left">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-white">
+                <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">2</span>
+                Prime Your AI (The Primer)
+            </h2>
+            <p class="text-slate-400 text-sm mb-6">Paste this command into your AI (ChatGPT, Claude, etc.) before using the collection to ensure it adheres to professional constraints.</p>
+            
+            <div class="relative group">
+                <pre id="metaPrompt" class="mono text-[13px] leading-relaxed bg-black p-6 rounded-2xl border border-slate-800 text-blue-100 whitespace-pre-wrap">Act as a professional collaborator using the 1000 AI Prompts framework. Resolve placeholders in {brackets} and adhere to constraints. Use SWOT, first principles, and 5-Why logic. Deliver rigorous, actionable insights without fluff.</pre>
+                <button onclick="copyMetaPrompt()" class="mt-4 w-full bg-slate-800 text-slate-300 py-3 rounded-xl text-sm font-bold hover:bg-slate-700 transition border border-slate-700">Copy Primer Prompt</button>
+            </div>
+        </div>
+
+        <p class="mt-12 text-slate-400 text-xs">
+            A confirmation email has also been sent to your inbox. <br>
+            Need help? Contact <span class="font-bold text-slate-500">support@promptworks.store</span>
+        </p>
+    </div>
+
+    <script>
+        function copyMetaPrompt() {
+            const text = document.getElementById('metaPrompt').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Primer copied! Paste this into your AI to start.');
+            });
+        }
+    </script>
+</body>
+</html>
