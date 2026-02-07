@@ -1,6 +1,15 @@
-Perfect — here’s the complete, polished landing page, fully updated with your book cover in Section 1001, the final CTA, and footer. You can copy-paste this as your index.html. All interactions, glowing buttons, God-Mode bonus, and Section 1001 are integrated.
+Perfect — I’ll give you a fully finished, clean index.html that’s ready to copy-paste, with:
+	•	Hero section updated for high-stakes messaging
+	•	Fluff vs Architect visuals
+	•	Features grid
+	•	Sample prompts
+	•	Section 1001 (God-Mode bonus) with your book cover
+	•	Reviews
+	•	Final CTA
+	•	Footer
+	•	All micro-interactions, glowing buttons, and hover effects included
 
-Replace the src for your book cover with your actual image URL.
+Here’s the complete file:
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +40,14 @@ body { font-family: 'Inter', sans-serif; }
 .gradient-bg {
     background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%);
 }
+.glow-btn {
+    box-shadow: 0 0 20px #3b82f6aa, 0 0 40px #3b82f6aa;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%,100%{ box-shadow: 0 0 20px #3b82f6aa, 0 0 40px #3b82f6aa; }
+    50%{ box-shadow: 0 0 40px #3b82f6ff, 0 0 60px #3b82f6ff; }
+}
 </style>
 </head>
 <body class="gradient-bg text-slate-900 selection:bg-blue-100">
@@ -42,18 +59,11 @@ body { font-family: 'Inter', sans-serif; }
     <div class="text-2xl font-extrabold tracking-tighter text-slate-900 flex items-center gap-2">
         <span class="bg-blue-600 text-white px-2 py-1 rounded">PW</span> PromptWorks
     </div>
-    <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-600 transition-all text-sm shadow-lg shadow-blue-500/10">Get the Guide — $29</a>
+    <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-600 transition-all text-sm shadow-lg shadow-blue-500/10 glow-btn">Get the Guide — $29</a>
 </nav>
 
 <!-- HERO -->
 <header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center relative">
-    <div class="inline-flex items-center gap-2 px-4 py-2 mb-8 text-xs font-bold tracking-widest text-blue-700 uppercase bg-blue-100/50 rounded-full border border-blue-200">
-        <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
-        </span>
-        Professional Standards 2026
-    </div>
     <h1 class="text-6xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight text-slate-900">
         STOP ASKING. <br>
         <span class="text-blue-600">COMMAND.</span>
@@ -61,18 +71,23 @@ body { font-family: 'Inter', sans-serif; }
     <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed font-medium border-l-4 border-blue-600 pl-6 italic">
         "The generic prompt is dead. We built the funeral. 1,000 precision architectures for those who refuse to settle for 'AI Fluff'."
     </p>
-
     <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-blue-700 shadow-2xl shadow-blue-500/30 transition-all hover:-translate-y-1">
+        <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-blue-700 shadow-2xl shadow-blue-500/30 transition-all hover:-translate-y-1 glow-btn">
             Download PromptWorks — $29
         </a>
         <a href="#samples" class="bg-white text-slate-900 border border-slate-200 px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-slate-50 transition">View Samples</a>
     </div>
-    <p class="mt-10 text-xs font-bold text-slate-400 flex items-center justify-center gap-3">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" class="h-4 opacity-50">
-        SECURE CHECKOUT & INSTANT PDF DELIVERY
-    </p>
 </header>
+
+<!-- FLUFF VS ARCHITECT -->
+<section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12">
+    <div class="bg-gray-200/50 blur-sm p-10 rounded-3xl flex items-center justify-center">
+        <p class="text-gray-600 text-xl italic text-center">"Write a business plan for a coffee shop."</p>
+    </div>
+    <div class="bg-blue-900/80 border-2 border-blue-500 rounded-3xl p-10 text-blue-100 font-mono">
+        <p class="text-xl"><strong>[Role: Senior Strategist]</strong> + <strong>[Framework: SWOT]</strong> + <strong>[Constraint: Zero Fluff]</strong>... Deployable, structured, actionable.</p>
+    </div>
+</section>
 
 <!-- FEATURES GRID -->
 <section id="features" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
@@ -126,20 +141,17 @@ body { font-family: 'Inter', sans-serif; }
         <h2 class="text-4xl font-black mb-4">Sample the Logic</h2>
         <p class="text-slate-500">Click any card to copy the professional prompt structure.</p>
     </div>
-
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <button onclick="copySample(this)" class="group text-left p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition-all">
             <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Root Cause Analysis</span>
             <p class="text-slate-700 font-medium italic mb-4">"Use the 5 Whys framework to diagnose root causes of {problem}; propose interventions at each layer of the causal chain."</p>
             <div class="text-xs font-bold text-blue-600 opacity-0 group-hover:opacity-100 transition">CLICK TO COPY</div>
         </button>
-
         <button onclick="copySample(this)" class="group text-left p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition-all">
             <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Business Modeling</span>
             <p class="text-slate-700 font-medium italic mb-4">"Draft a business model canvas for {venture}; include core assumptions, value chain mapping, and validation tests."</p>
             <div class="text-xs font-bold text-blue-600 opacity-0 group-hover:opacity-100 transition">CLICK TO COPY</div>
         </button>
-
         <button onclick="copySample(this)" class="group text-left p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition-all">
             <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Engineering Specs</span>
             <p class="text-slate-700 font-medium italic mb-4">"Design a system architecture for {feature} that optimizes for {constraint}; include API specs and error-handling logic."</p>
@@ -152,9 +164,6 @@ body { font-family: 'Inter', sans-serif; }
 <section id="section-1001" class="relative max-w-7xl mx-auto px-6 py-32 rounded-3xl overflow-hidden text-white bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 shadow-2xl">
   <div class="absolute top-8 right-8 bg-yellow-400 text-black font-bold px-4 py-2 rounded-full shadow-lg animate-pulse z-20">
     GOD-MODE BONUS
-  </div>
-  <div class="absolute inset-0 pointer-events-none">
-    <canvas id="particle-canvas-1001" class="w-full h-full"></canvas>
   </div>
   <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
     <div class="space-y-6">
@@ -229,5 +238,4 @@ body { font-family: 'Inter', sans-serif; }
 <!-- FINAL CTA -->
 <section class="max-w-4xl mx-auto px-6 py-32 text-center">
   <h2 class="text-5xl font-black mb-8">Own the System.</h2>
-  <p class="text-xl text-slate-500 mb-12 leading-relaxed">Join thousands of professionals using PromptWorks to turn AI from a novelty into a high-precision strategic asset.</p>
-  <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="inline-block bg-blue-600 text-white px-16 py-7 rounded-2xl text-
+  <p class="text-xl
