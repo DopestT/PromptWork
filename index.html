@@ -11,9 +11,10 @@
 <style>
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+  background: #f2f2f2; /* light gray to prevent washout */
 }
 
-/* Apple subtle fade-in */
+/* Apple fade */
 .fade {
   opacity: 0;
   animation: fadeIn 0.8s ease forwards;
@@ -23,17 +24,24 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Hero gradient */
+/* New hero gradient with real contrast */
 .hero-bg {
-  background: linear-gradient(180deg, #fafafa, #ffffff);
+  background: linear-gradient(180deg, #f8f8f8, #ffffff 60%);
+}
+
+/* Section contrast */
+.section-bg {
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 </style>
 
 </head>
-<body class="bg-white text-slate-900">
+<body class="text-slate-900">
 
 <!-- HEADER -->
-<header class="h-20 flex items-center hero-bg">
+<header class="h-20 flex items-center bg-white shadow-sm">
   <div class="max-w-6xl mx-auto px-6 flex items-center justify-between w-full">
     <div class="text-xl font-semibold tracking-tight">PromptWorks</div>
     <nav class="hidden md:flex gap-10 text-sm text-slate-600">
@@ -61,16 +69,16 @@ body {
       </p>
 
       <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
-        class="inline-block bg-black text-white px-10 py-4 rounded-full text-sm font-medium tracking-wide">
+        class="inline-block bg-black text-white px-10 py-4 rounded-full text-sm font-medium tracking-wide shadow-sm">
         Get PromptWorks — $29
       </a>
 
       <p class="text-xs text-slate-500 mt-4">Instant digital download.</p>
     </div>
 
-    <!-- RIGHT Visual Placeholder -->
+    <!-- RIGHT Placeholder -->
     <div class="hidden md:block">
-      <div class="w-full h-72 rounded-3xl bg-gradient-to-br from-slate-100 to-slate-50 border border-slate-200 shadow-sm"></div>
+      <div class="w-full h-72 rounded-3xl bg-white shadow-md border border-slate-200"></div>
     </div>
 
   </div>
@@ -78,7 +86,7 @@ body {
 
 <!-- FEATURES -->
 <section id="features" class="py-32">
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-6xl mx-auto px-6 section-bg p-16">
 
     <h2 class="text-3xl font-semibold tracking-tight mb-16">
       Designed for Professional Output
@@ -107,39 +115,39 @@ body {
 </section>
 
 <!-- PACKAGE -->
-<section id="package" class="py-32 border-t border-slate-200">
-  <div class="max-w-6xl mx-auto px-6">
+<section id="package" class="py-32">
+  <div class="max-w-6xl mx-auto px-6 section-bg p-16">
 
     <h2 class="text-3xl font-semibold tracking-tight mb-16">What You Get</h2>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-sm text-slate-700 leading-relaxed">
 
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div class="text-xs font-semibold text-slate-500 mb-2">Core PDF</div>
         <p>1,000 structured prompts across 10 domains.</p>
       </div>
 
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div class="text-xs font-semibold text-slate-500 mb-2">Meta Prompt</div>
         <p>A powerful universal prompt to elevate any output.</p>
       </div>
 
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div class="text-xs font-semibold text-slate-500 mb-2">Section 1001 (Bonus)</div>
         <p>An advanced chain included quietly inside the package.</p>
       </div>
 
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div class="text-xs font-semibold text-slate-500 mb-2">Cheat Sheet</div>
         <p>Quick-access sheet with high-performance prompts.</p>
       </div>
 
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div class="text-xs font-semibold text-slate-500 mb-2">Video Guide</div>
         <p>A short tutorial for applying structured prompts effectively.</p>
       </div>
 
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div class="text-xs font-semibold text-slate-500 mb-2">Discount</div>
         <p>Early buyer discount for your book included inside.</p>
       </div>
@@ -150,8 +158,8 @@ body {
 </section>
 
 <!-- SECTION 1001 -->
-<section id="section1001" class="py-32 border-t border-slate-200">
-  <div class="max-w-6xl mx-auto px-6">
+<section id="section1001" class="py-32">
+  <div class="max-w-6xl mx-auto px-6 section-bg p-16">
 
     <h2 class="text-3xl font-semibold tracking-tight mb-6">Section 1001</h2>
 
@@ -165,11 +173,11 @@ body {
 </section>
 
 <!-- CTA -->
-<section id="cta" class="py-32 text-center border-t border-slate-200 fade">
+<section id="cta" class="py-32 text-center section-bg mx-6 fade max-w-6xl mx-auto">
   <h2 class="text-4xl font-semibold mb-10">Upgrade Your Workflow</h2>
 
   <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
-    class="inline-block bg-black text-white px-12 py-4 rounded-full text-sm font-medium tracking-wide">
+    class="inline-block bg-black text-white px-12 py-4 rounded-full text-sm font-medium tracking-wide shadow-md">
     Get PromptWorks — $29
   </a>
 
@@ -177,7 +185,7 @@ body {
 </section>
 
 <!-- FOOTER -->
-<footer class="py-16 border-t border-slate-200 text-center text-xs text-slate-500">
+<footer class="py-16 text-center text-xs text-slate-500">
   © 2026 PromptWorks. All rights reserved.
 </footer>
 
