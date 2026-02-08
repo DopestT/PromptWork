@@ -3,179 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PromptWorks — 1,000 Professional AI Prompts</title>
+<title>PromptWorks — Professional Prompt System</title>
 
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
 body {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+}
+
+/* Apple subtle fade-in */
+.fade {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero gradient */
+.hero-bg {
+  background: linear-gradient(180deg, #fafafa, #ffffff);
 }
 </style>
 
 </head>
-<body class="bg-white text-slate-800">
+<body class="bg-white text-slate-900">
 
 <!-- HEADER -->
-<header class="border-b border-slate-200">
-  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-    <div class="font-bold text-lg">PromptWorks</div>
+<header class="h-20 flex items-center hero-bg">
+  <div class="max-w-6xl mx-auto px-6 flex items-center justify-between w-full">
+    <div class="text-xl font-semibold tracking-tight">PromptWorks</div>
     <nav class="hidden md:flex gap-10 text-sm text-slate-600">
-      <a href="#features" class="hover:text-black">Features</a>
-      <a href="#package" class="hover:text-black">Package</a>
-      <a href="#bonus" class="hover:text-black">Section 1001</a>
-      <a href="#cta" class="hover:text-black font-medium">Buy Now</a>
+      <a href="#features" class="hover:text-black transition">Features</a>
+      <a href="#package" class="hover:text-black transition">Package</a>
+      <a href="#section1001" class="hover:text-black transition">Section 1001</a>
+      <a href="#cta" class="hover:text-black transition font-medium">Buy</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="max-w-6xl mx-auto px-6 py-24">
-  <div class="md:flex md:items-start md:justify-between gap-16">
+<section class="hero-bg py-32 fade">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
 
     <!-- LEFT -->
-    <div class="max-w-xl">
-      <h1 class="text-4xl font-bold leading-tight mb-6">
-        1,000 Expert-Level Prompts for Real Work
+    <div>
+      <h1 class="text-5xl md:text-6xl font-semibold leading-tight tracking-tight mb-8">
+        1,000 Expert Prompts.<br> One Clean System.
       </h1>
 
-      <p class="text-lg text-slate-600 mb-10">
-        A complete prompt system for marketing, research, content creation, planning, and productivity. 
-        Built to produce consistent, reliable, high-quality AI outputs.
+      <p class="text-lg text-slate-600 leading-relaxed mb-12">
+        A professional toolkit of structured prompts for marketing, research, content, planning, 
+        and workflow optimization—designed for consistent, high-quality results.
       </p>
 
       <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
-         class="inline-block bg-slate-900 text-white px-8 py-4 rounded-lg text-sm font-semibold">
-         Get PromptWorks — $29
+        class="inline-block bg-black text-white px-10 py-4 rounded-full text-sm font-medium tracking-wide">
+        Get PromptWorks — $29
       </a>
 
-      <p class="text-xs text-slate-500 mt-3">
-        Instant digital download. Yours for life.
-      </p>
+      <p class="text-xs text-slate-500 mt-4">Instant digital download.</p>
     </div>
 
-    <!-- RIGHT -->
-    <div class="hidden md:block w-80 h-56 border border-slate-200 rounded-xl"></div>
+    <!-- RIGHT Visual Placeholder -->
+    <div class="hidden md:block">
+      <div class="w-full h-72 rounded-3xl bg-gradient-to-br from-slate-100 to-slate-50 border border-slate-200 shadow-sm"></div>
+    </div>
 
   </div>
 </section>
 
 <!-- FEATURES -->
-<section id="features" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200">
-  <h2 class="text-2xl font-bold mb-12">What’s Inside</h2>
+<section id="features" class="py-32">
+  <div class="max-w-6xl mx-auto px-6">
 
-  <div class="grid md:grid-cols-3 gap-12 text-slate-600 text-sm">
+    <h2 class="text-3xl font-semibold tracking-tight mb-16">
+      Designed for Professional Output
+    </h2>
 
-    <div>
-      <h3 class="font-semibold text-slate-900 mb-3">Structured Frameworks</h3>
-      <p>Prompts are organized into clean, repeatable templates for clarity and reliability.</p>
-    </div>
+    <div class="grid md:grid-cols-3 gap-16 text-slate-700 text-sm leading-relaxed">
 
-    <div>
-      <h3 class="font-semibold text-slate-900 mb-3">Professionally Engineered</h3>
-      <p>Each prompt is built with constraints, variables, and instructions for consistent results.</p>
-    </div>
+      <div>
+        <h3 class="text-lg font-medium mb-3">Structured frameworks</h3>
+        <p>Prompts built with clarity and constraints for predictable results.</p>
+      </div>
 
-    <div>
-      <h3 class="font-semibold text-slate-900 mb-3">Real-World Tested</h3>
-      <p>Prompts validated across marketing, scripting, planning, research, and more.</p>
+      <div>
+        <h3 class="text-lg font-medium mb-3">Expert engineering</h3>
+        <p>Optimized across 10 real-world domains for performance.</p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-medium mb-3">Consistent workflow</h3>
+        <p>A system that reduces guesswork and eliminates re-writing.</p>
+      </div>
+
     </div>
 
   </div>
 </section>
 
 <!-- PACKAGE -->
-<section id="package" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200">
-  <h2 class="text-2xl font-bold mb-12">Your Package</h2>
+<section id="package" class="py-32 border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
 
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-sm text-slate-700">
+    <h2 class="text-3xl font-semibold tracking-tight mb-16">What You Get</h2>
 
-    <div class="p-6 border border-slate-200 rounded-xl">
-      <div class="text-xs font-semibold text-slate-500 mb-2">PDF</div>
-      <p>1,000 structured prompts across 10 domains.</p>
-    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-sm text-slate-700 leading-relaxed">
 
-    <div class="p-6 border border-slate-200 rounded-xl">
-      <div class="text-xs font-semibold text-slate-500 mb-2">Meta Prompt</div>
-      <p>A universal prompt to strengthen and refine any output.</p>
-    </div>
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+        <div class="text-xs font-semibold text-slate-500 mb-2">Core PDF</div>
+        <p>1,000 structured prompts across 10 domains.</p>
+      </div>
 
-    <div class="p-6 border border-slate-200 rounded-xl">
-      <div class="text-xs font-semibold text-slate-500 mb-2">Section 1001 (Bonus)</div>
-      <p>An advanced prompt chain included quietly in the package.</p>
-    </div>
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+        <div class="text-xs font-semibold text-slate-500 mb-2">Meta Prompt</div>
+        <p>A powerful universal prompt to elevate any output.</p>
+      </div>
 
-    <div class="p-6 border border-slate-200 rounded-xl">
-      <div class="text-xs font-semibold text-slate-500 mb-2">Cheat Sheet</div>
-      <p>Quick-access PDF with 10 of the highest-performing prompts.</p>
-    </div>
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+        <div class="text-xs font-semibold text-slate-500 mb-2">Section 1001 (Bonus)</div>
+        <p>An advanced chain included quietly inside the package.</p>
+      </div>
 
-    <div class="p-6 border border-slate-200 rounded-xl">
-      <div class="text-xs font-semibold text-slate-500 mb-2">Video Guide</div>
-      <p>A brief walkthrough on using structured prompts effectively.</p>
-    </div>
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+        <div class="text-xs font-semibold text-slate-500 mb-2">Cheat Sheet</div>
+        <p>Quick-access sheet with high-performance prompts.</p>
+      </div>
 
-    <div class="p-6 border border-slate-200 rounded-xl">
-      <div class="text-xs font-semibold text-slate-500 mb-2">Discount</div>
-      <p>Early buyer discount for your book purchase, included inside.</p>
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+        <div class="text-xs font-semibold text-slate-500 mb-2">Video Guide</div>
+        <p>A short tutorial for applying structured prompts effectively.</p>
+      </div>
+
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+        <div class="text-xs font-semibold text-slate-500 mb-2">Discount</div>
+        <p>Early buyer discount for your book included inside.</p>
+      </div>
+
     </div>
 
   </div>
 </section>
 
-<!-- BONUS SECTION -->
-<section id="bonus" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200">
-  <h2 class="text-2xl font-bold mb-6">Section 1001</h2>
-  <p class="text-slate-600 max-w-2xl text-sm">
-    Section 1001 is a concise, advanced prompt chain designed to expand the output potential 
-    of any AI model. It’s included as a quiet bonus inside your package and can be used to 
-    enhance, refine, and structure complex tasks.
-  </p>
-</section>
+<!-- SECTION 1001 -->
+<section id="section1001" class="py-32 border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
 
-<!-- COMPARISON -->
-<section class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200">
-  <h2 class="text-2xl font-bold mb-12">Before and After</h2>
+    <h2 class="text-3xl font-semibold tracking-tight mb-6">Section 1001</h2>
 
-  <div class="grid md:grid-cols-2 gap-12 text-sm">
-
-    <div class="border border-slate-200 rounded-xl p-8">
-      <h3 class="font-semibold text-slate-900 mb-3">Without PromptWorks</h3>
-      <ul class="text-slate-600 space-y-2">
-        <li>• Unpredictable outputs</li>
-        <li>• Rewriting results manually</li>
-        <li>• Inconsistent structure</li>
-      </ul>
-    </div>
-
-    <div class="border border-slate-200 rounded-xl p-8">
-      <h3 class="font-semibold text-slate-900 mb-3">With PromptWorks</h3>
-      <ul class="text-slate-600 space-y-2">
-        <li>• Clear structure</li>
-        <li>• Consistent outputs</li>
-        <li>• Faster workflows</li>
-      </ul>
-    </div>
+    <p class="text-slate-600 leading-relaxed text-base max-w-2xl">
+      Section 1001 is a refined, advanced prompt chain engineered to expand the capability of 
+      any AI model. Included discreetly inside PromptWorks, it offers deeper structure, 
+      improved reasoning, and enhanced clarity for complex tasks.
+    </p>
 
   </div>
 </section>
 
 <!-- CTA -->
-<section id="cta" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200 text-center">
-  <h2 class="text-3xl font-bold mb-6">Upgrade your workflow.</h2>
+<section id="cta" class="py-32 text-center border-t border-slate-200 fade">
+  <h2 class="text-4xl font-semibold mb-10">Upgrade Your Workflow</h2>
 
   <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
-     class="inline-block bg-slate-900 text-white px-10 py-4 rounded-lg text-sm font-semibold">
+    class="inline-block bg-black text-white px-12 py-4 rounded-full text-sm font-medium tracking-wide">
     Get PromptWorks — $29
   </a>
 
-  <p class="text-xs text-slate-500 mt-3">Instant digital delivery.</p>
+  <p class="text-xs text-slate-500 mt-4">Instant download. Lifetime use.</p>
 </section>
 
 <!-- FOOTER -->
-<footer class="border-t border-slate-200 py-12 text-center text-xs text-slate-500">
-  &copy; 2026 PromptWorks. All rights reserved.
+<footer class="py-16 border-t border-slate-200 text-center text-xs text-slate-500">
+  © 2026 PromptWorks. All rights reserved.
 </footer>
 
 </body>
