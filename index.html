@@ -5,183 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PromptWorks | 1000 Professional AI Prompts</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Fonts + Base Styles -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
-        
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; }
-
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .glass { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(14px); }
-        .gradient-bg { background: radial-gradient(circle at 20% 10%, #ffffff 0%, #f1f5f9 100%); }
-
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
         .copy-toast {
-            display: none; position: fixed; bottom: 28px; left: 50%;
-            transform: translateX(-50%);
-            background: #0f172a; color: #f8fafc;
-            padding: 14px 28px; border-radius: 12px;
-            font-weight: 600; box-shadow: 0 12px 32px rgba(0,0,0,0.18);
-            z-index: 999;
+            display: none; position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            background: #0f172a; color: #f8fafc; padding: 14px 28px; border-radius: 12px;
+            font-weight: 600; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2); z-index: 100;
         }
-
-        .card-hover:hover { 
-            transform: translateY(-6px);
-            border-color: #2563eb;
-            transition: all 0.25s ease;
-        }
+        .gradient-bg { background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%); }
+        .card-hover:hover { transform: translateY(-5px); border-color: #3b82f6; transition: all 0.3s ease; }
     </style>
 </head>
 
 <body class="gradient-bg text-slate-900 selection:bg-blue-100">
 
-<!-- Announcement Bar -->
-<div class="bg-blue-600 text-white py-3 px-4 text-center text-xs md:text-sm font-extrabold tracking-widest uppercase sticky top-0 z-50">
-    🚀 Launch Special: 1,000 Precision Prompts — $29 · 24H Left
-</div>
-
-<!-- Toast -->
-<div id="copyToast" class="copy-toast italic">Copied to clipboard!</div>
-
-<!-- Navigation -->
-<nav class="p-6 flex justify-between items-center max-w-7xl mx-auto glass sticky top-[40px] z-40 rounded-b-3xl border-x border-b border-slate-200">
-    <div class="text-xl font-extrabold tracking-tighter flex items-center gap-2">
-        <span class="bg-blue-600 text-white px-2 py-0.5 rounded">PW</span> PromptWorks
+    <!-- Discount Banner -->
+    <div class="bg-emerald-600 text-white py-3 px-4 text-center text-[10px] md:text-sm font-extrabold tracking-widest uppercase sticky top-0 z-[60]">
+        🔥 10% Discount Applied — Today Only
     </div>
 
-    <ul class="hidden md:flex gap-8 text-sm font-bold text-slate-600">
-        <li><a href="#features" class="hover:text-blue-600 transition">Domains</a></li>
-        <li><a href="#samples" class="hover:text-blue-600 transition">Samples</a></li>
-        <li><a href="#reviews" class="hover:text-blue-600 transition">Reviews</a></li>
-    </ul>
-
-    <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" 
-       class="bg-slate-900 text-white px-5 py-2 rounded-full font-bold text-xs hover:bg-blue-600 transition-all shadow-lg">
-       Get PromptWorks — $29
-    </a>
-</nav>
-
-<!-- HERO -->
-<header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center">
-    <h1 class="text-5xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight">
-        Sophisticated AI.<br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-            Zero Fluff.
-        </span>
-    </h1>
-
-    <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
-        Stop prompting. Start architecting.  
-        A curated collection of 1,000 high-precision prompts built on placeholders, constraints, and reasoning frameworks.
-    </p>
-
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
-           class="bg-blue-600 text-white px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-blue-700 shadow-xl shadow-blue-500/30 transition-all hover:-translate-y-1">
-           Download the Collection
-        </a>
-
-        <a href="#samples" 
-           class="bg-white text-slate-900 border border-slate-300 px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-slate-50 transition">
-           View Samples
-        </a>
+    <!-- Launch Banner -->
+    <div class="bg-blue-600 text-white py-3 px-4 text-center text-[10px] md:text-sm font-extrabold tracking-widest uppercase sticky top-[32px] z-50">
+        🚀 LAUNCH SPECIAL: Get the full 1,000 Prompt Collection — Now 10% Off
     </div>
-</header>
 
-<!-- META PROMPT -->
-<section class="max-w-5xl mx-auto px-6 mb-32">
-    <div class="bg-slate-950 rounded-[2.5rem] p-8 lg:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
+    <div id="copyToast" class="copy-toast italic">Copied to clipboard!</div>
 
-        <div class="absolute top-0 right-0 w-72 h-72 bg-blue-600/10 blur-[120px] rounded-full"></div>
+    <!-- NAVIGATION -->
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto glass sticky top-[80px] z-40 rounded-b-3xl border-x border-b border-slate-100">
+        <div class="text-xl font-extrabold tracking-tighter text-slate-900 flex items-center gap-2">
+            <span class="bg-blue-600 text-white px-2 py-0.5 rounded">PW</span> PromptWorks
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-bold text-slate-500">
+            <a href="#samples" class="hover:text-blue-600 transition">Samples</a>
+            <a href="#handbook" class="hover:text-blue-600 transition">Handbook</a>
+            <a href="#affiliates" class="hover:text-blue-600 transition">Affiliates</a>
+            <a href="#ads" class="hover:text-blue-600 transition">Ads</a>
+            <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
+        </div>
+        <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" 
+           class="bg-emerald-600 text-white px-5 py-2 rounded-full font-bold hover:bg-emerald-700 transition-all text-xs shadow-lg">
+            Get PromptWorks — 10% Off
+        </a>
+    </nav>
 
-        <div class="flex flex-col lg:flex-row gap-10 items-center relative z-10">
-            <div class="lg:w-1/2">
-                <h2 class="text-3xl font-black text-white mb-4">Step 0: Prime the AI</h2>
-                <p class="text-slate-400 leading-relaxed mb-6 italic">
-                    "The foundational prompt that makes the next 1,000 work dramatically better."
-                </p>
-            </div>
+    <!-- HERO SECTION -->
+    <header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center">
+        <h1 class="text-5xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight">
+            Sophisticated AI.<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Zero Fluff.</span>
+        </h1>
+        <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-12">
+            Stop prompting. Start architecting.  
+            1,000 precision prompts built with placeholders + constraints for elite output quality.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
+               class="bg-emerald-600 text-white px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 shadow-xl transition-all hover:-translate-y-1">
+               Download the Collection — 10% Off
+            </a>
+            <a href="#samples" 
+               class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-slate-50 transition">
+               View Samples
+            </a>
+        </div>
+    </header>
 
-            <div class="lg:w-1/2 w-full">
-                <div class="relative">
-                    <pre id="metaPrompt"
-                        class="mono text-[12px] leading-relaxed bg-black p-6 rounded-2xl border border-slate-700 text-blue-300 whitespace-pre-wrap">
-Act as a professional collaborator using the 1000 AI Prompts framework. Resolve placeholders in {brackets} and adhere to constraints. Deliver rigorous, actionable insights without fluff.
-                    </pre>
+    <!-- META PROMPT -->
+    <section class="max-w-5xl mx-auto px-6 mb-32">
+        <div class="bg-slate-950 rounded-[2.5rem] p-8 lg:p-12 shadow-3xl border border-slate-800 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full"></div>
+            <div class="flex flex-col lg:flex-row gap-10 items-center relative z-10">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-black text-white mb-4">Step 0: Prime the AI</h2>
+                    <p class="text-slate-400 leading-relaxed mb-6 italic">"The prompt that makes all other prompts work."</p>
+                </div>
 
-                    <button onclick="copyMetaPrompt()" 
-                        class="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-blue-500 transition">
-                        Copy Primer
-                    </button>
+                <div class="lg:w-1/2 w-full">
+                    <div class="relative group">
+                        <pre id="metaPrompt" class="mono text-[12px] leading-relaxed bg-black p-6 rounded-2xl border border-slate-800 text-blue-300 whitespace-pre-wrap">Act as a professional collaborator using the 1000 AI Prompts framework. Resolve placeholders in {brackets} and adhere to constraints. Deliver rigorous, actionable insights without fluff.</pre>
+                        <button onclick="copyMetaPrompt()" class="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-blue-500 transition">Copy Primer</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- REVIEWS -->
-<section id="reviews" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
-    <div class="grid md:grid-cols-3 gap-8">
+    <!-- SAMPLES SECTION -->
+    <section id="samples" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
+        <h2 class="text-4xl font-black text-center mb-12">Sample Prompts</h2>
+        <div class="grid md:grid-cols-3 gap-8">
 
-        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-            <div class="text-blue-600 mb-4 text-xs">★★★★★</div>
-            <p class="text-slate-700 italic mb-6">
-                "The SWOT prompts saved me 10 hours this week. This is a reasoning framework — not a list."
-            </p>
-            <p class="text-xs font-black text-slate-900 uppercase tracking-widest">James D. — Strategy</p>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
+                <h3 class="text-xl font-bold mb-4">Strategy</h3>
+                <p class="text-sm mono text-slate-600">
+                    “Develop a {90-day roadmap} for {product} targeting {audience}. Include constraints: {budget}, {team size}.”
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
+                <h3 class="text-xl font-bold mb-4">Automation</h3>
+                <p class="text-sm mono text-slate-600">
+                    “Create an automation workflow connecting {tool A} with {tool B}. Include constraints: {trigger}, {fallback}.”
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
+                <h3 class="text-xl font-bold mb-4">Content Engine</h3>
+                <p class="text-sm mono text-slate-600">
+                    “Generate a 30-day content calendar for {audience} using {pillar 1}, {pillar 2}, and {CTA}. Output table format.”
+                </p>
+            </div>
+
         </div>
+    </section>
 
-        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-            <div class="text-blue-600 mb-4 text-xs">★★★★★</div>
-            <p class="text-slate-700 italic mb-6">
-                "Finally, prompts that aren't AI-fluff. The engineering templates are actually deployable."
-            </p>
-            <p class="text-xs font-black text-slate-900 uppercase tracking-widest">Sarah K. — Senior Dev</p>
+    <!-- BOOK SECTION -->
+    <section id="handbook" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+
+            <img src="/mnt/data/7EF388C4-4ACF-46B4-8310-DC6EB9375EB3.png" 
+                 class="w-full rounded-3xl shadow-xl border border-slate-200">
+
+            <div>
+                <h2 class="text-4xl font-black mb-3">The Prompt Hustle Handbook</h2>
+                <p class="text-slate-600 mb-6 text-lg">
+                    Learn how creators make $100/day with AI prompt systems.  
+                    A zero-fluff, actionable playbook built for real execution.
+                </p>
+
+                <ul class="space-y-2 text-slate-700 mb-8">
+                    <li>✔ 7 proven prompt income systems</li>
+                    <li>✔ Ready-to-use templates</li>
+                    <li>✔ Automation workflows</li>
+                    <li>✔ 10% discount included today</li>
+                </ul>
+
+                <a href="YOUR_CHECKOUT_LINK"
+                   class="bg-emerald-600 text-white px-10 py-4 rounded-2xl text-lg font-bold shadow-lg hover:bg-emerald-700 transition">
+                    Get the Handbook — 10% Off
+                </a>
+            </div>
         </div>
+    </section>
 
-        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-            <div class="text-blue-600 mb-4 text-xs">★★★★★</div>
-            <p class="text-slate-700 italic mb-6">
-                "Essential for founders. The structural rigor and constraints make all the difference."
-            </p>
-            <p class="text-xs font-black text-slate-900 uppercase tracking-widest">Marcus L. — Founder</p>
-        </div>
+    <!-- AFFILIATE PROGRAM -->
+    <section id="affiliates" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
+        <h2 class="text-4xl font-black text-center mb-8">Affiliate Program</h2>
 
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-
-        <p class="text-slate-400 text-xs font-medium">
-            © 2026 PromptWorks.store · All Rights Reserved · Secure Checkout via Stripe
+        <p class="text-center text-slate-600 max-w-2xl mx-auto mb-12">
+            Earn <span class="font-bold text-blue-600">35% commissions</span> promoting PromptWorks products.
+            Instant approvals · 30-day cookie · High conversions.
         </p>
 
-        <div class="flex gap-8 text-xs font-bold text-slate-600">
-            <a href="mailto:support@promptworks.store" class="hover:text-blue-600 transition">Support</a>
-
-            <button onclick="alert('Affiliate Program: Email partners@promptworks.store with your social links to receive your custom 35% commission link.')"
-                    class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full hover:bg-blue-100 transition">
-                Become a Partner (35% Commission)
-            </button>
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-sm p-10 max-w-xl mx-auto text-center">
+            <a href="mailto:partners@promptworks.store"
+               class="bg-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-extrabold hover:bg-blue-700 transition shadow-md">
+                Apply Now — 35% Commission
+            </a>
+            <p class="text-xs text-slate-500 mt-6">Approval under 24 hours · Paid monthly</p>
         </div>
-    </div>
-</footer>
+    </section>
 
-<script>
-    function showToast() {
-        const toast = document.getElementById('copyToast');
-        toast.style.display = 'block';
-        setTimeout(() => toast.style.display = 'none', 2200);
-    }
-    function copyMetaPrompt() {
-        navigator.clipboard.writeText(
-            document.getElementById('metaPrompt').innerText
-        ).then(showToast);
-    }
-</script>
+    <!-- ADS SECTION -->
+    <section id="ads" class="max-w-7xl mx-auto px-6 py-24">
+        <h2 class="text-3xl font-black text-center mb-12">Sponsored Picks</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
+                <h4 class="text-xl font-bold mb-3">Your Ad Here</h4>
+                <p class="text-slate-600 text-sm mb-4">Promote your AI product or service.</p>
+                <a href="mailto:ads@promptworks.store" class="text-blue-600 font-bold hover:text-blue-700">Sponsor this slot →</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
+                <h4 class="text-xl font-bold mb-3">AI Tools Marketplace</h4>
+                <p class="text-slate-600 text-sm mb-4">Browse curated tools for automation.</p>
+                <a href="#" class="text-blue-600 font-bold hover:text-blue-700">Explore →</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
+                <h4 class="text-xl font-bold mb-3">Creator Bundle</h4>
+                <p class="text-slate-600 text-sm mb-4">Get 3 top AI playbooks at a discount.</p>
+                <a href="#" class="text-blue-600 font-bold hover:text-blue-700">Learn More →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover">
+                <div class="text-blue-500 mb-4 text-xs">★★★★★</div>
+                <p class="text-slate-600 italic mb-6">"The SWOT prompts saved me 10 hours this week. This is a logic system, not a list."</p>
+                <p class="text-xs font-black text-slate-900 uppercase tracking-widest">James D. — Strategy</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover">
+                <div class="text-blue-500 mb-4 text-xs">★★★★★</div>
+                <p class="text-slate-600 italic mb-6">"Finally, prompts that aren't AI fluff. The engineering ones are deployable."</p>
+                <p class="text-xs font-black text-slate-900 uppercase tracking-widest">Sarah K. — Senior Dev</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover">
+                <div class="text-blue-500 mb-4 text-xs">★★★★★</div>
+                <p class="text-slate-600 italic mb-6">"Essential for founders. The structure + constraints make all the difference."</p>
+                <p class="text-xs font-black text-slate-900 uppercase tracking-widest">Marcus L. — Founder</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-slate-400 text-xs font-medium">
+                © 2026 PromptWorks.store. All Rights Reserved. Secure checkout via Stripe.
+            </div>
+            <div class="flex gap-8 text-xs font-bold text-slate-500">
+                <a href="mailto:support@promptworks.store" class="hover:text-blue-600 transition">Support</a>
+                <a href="mailto:partners@promptworks.store" class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full hover:bg-blue-100 transition">Become a Partner (35% Commission)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showToast() {
+            const toast = document.getElementById('copyToast');
+            toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 2500);
+        }
+        function copyMetaPrompt() {
+            const text = document.getElementById('metaPrompt').innerText;
+            navigator.clipboard.writeText(text).then(showToast);
+        }
+    </script>
 
 </body>
 </html>
