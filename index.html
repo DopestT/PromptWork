@@ -1,247 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PromptWorks | 1000 Professional AI Prompts</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
-        .copy-toast {
-            display: none; position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
-            background: #0f172a; color: #f8fafc; padding: 14px 28px; border-radius: 12px;
-            font-weight: 600; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2); z-index: 100;
-        }
-        .gradient-bg { background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%); }
-        .card-hover:hover { transform: translateY(-5px); border-color: #3b82f6; transition: all 0.3s ease; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tools I Use + Love | Kevin Hewitt</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+  body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #111827; }
+  .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+  .affiliate-link { color: #3b82f6; font-weight: 600; text-decoration: underline; }
+  header { background: linear-gradient(135deg,#4f46e5,#3b82f6); color: white; }
+</style>
 </head>
+<body class="">
 
-<body class="gradient-bg text-slate-900 selection:bg-blue-100">
+<!-- HEADER -->
+<header class="py-20 text-center">
+  <h1 class="text-5xl font-black mb-4">Tools I Use + Love</h1>
+  <p class="text-lg max-w-2xl mx-auto">A curated list of my favorite AI and productivity tools, with affiliate links for your convenience.</p>
+</header>
 
-    <!-- Discount Banner -->
-    <div class="bg-emerald-600 text-white py-3 px-4 text-center text-[10px] md:text-sm font-extrabold tracking-widest uppercase sticky top-0 z-[60]">
-        🔥 10% Discount Applied — Today Only
+<!-- BOOK HERO -->
+<section class="max-w-5xl mx-auto px-6 py-16 text-center">
+  <img src="/mnt/data/A_webpage_titled_\"Tools_I_Use_+_Love\"_features_Kev.png" 
+       alt="Prompt Hustle Handbook" class="mx-auto mb-8 rounded-xl shadow-xl border border-gray-300 w-64 h-64 object-cover">
+  <h2 class="text-3xl font-bold mb-4">The Prompt Hustle Handbook</h2>
+  <p class="text-gray-700 mb-6">Your guide to making $100/day using AI prompt systems. Zero-fluff, action-oriented, and ready for execution.</p>
+  <a href="YOUR_BOOK_AFFILIATE_LINK" 
+     class="bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-emerald-700 transition">
+     Get the Handbook — 10% Off
+  </a>
+</section>
+
+<!-- FEATURED TOOLS -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+  <h2 class="text-4xl font-black text-center mb-12">Featured Recommendations</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    
+    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+      <h3 class="font-bold text-xl mb-2">Pictory</h3>
+      <p class="text-gray-600 mb-3">AI video editor to turn scripts into engaging videos quickly.</p>
+      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Pictory →</a>
+    </div>
+    
+    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+      <h3 class="font-bold text-xl mb-2">Zapier</h3>
+      <p class="text-gray-600 mb-3">Automate workflows across apps and save hours weekly.</p>
+      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Zapier →</a>
+    </div>
+    
+    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+      <h3 class="font-bold text-xl mb-2">Webflow</h3>
+      <p class="text-gray-600 mb-3">Build no-code websites with design flexibility and clean code export.</p>
+      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Webflow →</a>
     </div>
 
-    <!-- Launch Banner -->
-    <div class="bg-blue-600 text-white py-3 px-4 text-center text-[10px] md:text-sm font-extrabold tracking-widest uppercase sticky top-[32px] z-50">
-        🚀 LAUNCH SPECIAL: Get the full 1,000 Prompt Collection — Now 10% Off
+  </div>
+</section>
+
+<!-- ADDITIONAL TOOLS -->
+<section class="max-w-7xl mx-auto px-6 py-16 bg-gray-50 rounded-xl">
+  <h2 class="text-3xl font-bold text-center mb-12">Everyday Apps & Tools</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    
+    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+      <h3 class="font-bold text-lg mb-2">ConvertKit</h3>
+      <p class="text-gray-600 mb-3">Email marketing for creators with automated funnels and list growth tools.</p>
+      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get ConvertKit →</a>
     </div>
 
-    <div id="copyToast" class="copy-toast italic">Copied to clipboard!</div>
+    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+      <h3 class="font-bold text-lg mb-2">Hostinger</h3>
+      <p class="text-gray-600 mb-3">Reliable hosting with fast servers and great uptime.</p>
+      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Hostinger →</a>
+    </div>
 
-    <!-- NAVIGATION -->
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto glass sticky top-[80px] z-40 rounded-b-3xl border-x border-b border-slate-100">
-        <div class="text-xl font-extrabold tracking-tighter text-slate-900 flex items-center gap-2">
-            <span class="bg-blue-600 text-white px-2 py-0.5 rounded">PW</span> PromptWorks
-        </div>
-        <div class="hidden md:flex gap-8 text-sm font-bold text-slate-500">
-            <a href="#samples" class="hover:text-blue-600 transition">Samples</a>
-            <a href="#handbook" class="hover:text-blue-600 transition">Handbook</a>
-            <a href="#affiliates" class="hover:text-blue-600 transition">Affiliates</a>
-            <a href="#ads" class="hover:text-blue-600 transition">Ads</a>
-            <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
-        </div>
-        <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" 
-           class="bg-emerald-600 text-white px-5 py-2 rounded-full font-bold hover:bg-emerald-700 transition-all text-xs shadow-lg">
-            Get PromptWorks — 10% Off
-        </a>
-    </nav>
+    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+      <h3 class="font-bold text-lg mb-2">Writesonic</h3>
+      <p class="text-gray-600 mb-3">AI writing assistant for blogs, ads, emails, and more.</p>
+      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Writesonic →</a>
+    </div>
 
-    <!-- HERO SECTION -->
-    <header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center">
-        <h1 class="text-5xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight">
-            Sophisticated AI.<br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Zero Fluff.</span>
-        </h1>
-        <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-12">
-            Stop prompting. Start architecting.  
-            1,000 precision prompts built with placeholders + constraints for elite output quality.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
-               class="bg-emerald-600 text-white px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 shadow-xl transition-all hover:-translate-y-1">
-               Download the Collection — 10% Off
-            </a>
-            <a href="#samples" 
-               class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-slate-50 transition">
-               View Samples
-            </a>
-        </div>
-    </header>
+  </div>
+</section>
 
-    <!-- META PROMPT -->
-    <section class="max-w-5xl mx-auto px-6 mb-32">
-        <div class="bg-slate-950 rounded-[2.5rem] p-8 lg:p-12 shadow-3xl border border-slate-800 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full"></div>
-            <div class="flex flex-col lg:flex-row gap-10 items-center relative z-10">
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl font-black text-white mb-4">Step 0: Prime the AI</h2>
-                    <p class="text-slate-400 leading-relaxed mb-6 italic">"The prompt that makes all other prompts work."</p>
-                </div>
+<!-- AFFILIATE PROGRAM -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-black text-center mb-8">Affiliate Program</h2>
+  <p class="text-center text-gray-700 mb-8">Earn <span class="font-bold text-blue-600">35% commissions</span> promoting my products and tools.</p>
+  <div class="text-center">
+    <a href="mailto:partners@promptworks.store" 
+       class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 transition">
+       Apply Now → 35% Commission
+    </a>
+  </div>
+</section>
 
-                <div class="lg:w-1/2 w-full">
-                    <div class="relative group">
-                        <pre id="metaPrompt" class="mono text-[12px] leading-relaxed bg-black p-6 rounded-2xl border border-slate-800 text-blue-300 whitespace-pre-wrap">Act as a professional collaborator using the 1000 AI Prompts framework. Resolve placeholders in {brackets} and adhere to constraints. Deliver rigorous, actionable insights without fluff.</pre>
-                        <button onclick="copyMetaPrompt()" class="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-blue-500 transition">Copy Primer</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SAMPLES SECTION -->
-    <section id="samples" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
-        <h2 class="text-4xl font-black text-center mb-12">Sample Prompts</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-                <h3 class="text-xl font-bold mb-4">Strategy</h3>
-                <p class="text-sm mono text-slate-600">
-                    “Develop a {90-day roadmap} for {product} targeting {audience}. Include constraints: {budget}, {team size}.”
-                </p>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-                <h3 class="text-xl font-bold mb-4">Automation</h3>
-                <p class="text-sm mono text-slate-600">
-                    “Create an automation workflow connecting {tool A} with {tool B}. Include constraints: {trigger}, {fallback}.”
-                </p>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-                <h3 class="text-xl font-bold mb-4">Content Engine</h3>
-                <p class="text-sm mono text-slate-600">
-                    “Generate a 30-day content calendar for {audience} using {pillar 1}, {pillar 2}, and {CTA}. Output table format.”
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- BOOK SECTION -->
-    <section id="handbook" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-
-            <img src="/mnt/data/7EF388C4-4ACF-46B4-8310-DC6EB9375EB3.png" 
-                 class="w-full rounded-3xl shadow-xl border border-slate-200">
-
-            <div>
-                <h2 class="text-4xl font-black mb-3">The Prompt Hustle Handbook</h2>
-                <p class="text-slate-600 mb-6 text-lg">
-                    Learn how creators make $100/day with AI prompt systems.  
-                    A zero-fluff, actionable playbook built for real execution.
-                </p>
-
-                <ul class="space-y-2 text-slate-700 mb-8">
-                    <li>✔ 7 proven prompt income systems</li>
-                    <li>✔ Ready-to-use templates</li>
-                    <li>✔ Automation workflows</li>
-                    <li>✔ 10% discount included today</li>
-                </ul>
-
-                <a href="YOUR_CHECKOUT_LINK"
-                   class="bg-emerald-600 text-white px-10 py-4 rounded-2xl text-lg font-bold shadow-lg hover:bg-emerald-700 transition">
-                    Get the Handbook — 10% Off
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- AFFILIATE PROGRAM -->
-    <section id="affiliates" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
-        <h2 class="text-4xl font-black text-center mb-8">Affiliate Program</h2>
-
-        <p class="text-center text-slate-600 max-w-2xl mx-auto mb-12">
-            Earn <span class="font-bold text-blue-600">35% commissions</span> promoting PromptWorks products.
-            Instant approvals · 30-day cookie · High conversions.
-        </p>
-
-        <div class="bg-white rounded-3xl border border-slate-200 shadow-sm p-10 max-w-xl mx-auto text-center">
-            <a href="mailto:partners@promptworks.store"
-               class="bg-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-extrabold hover:bg-blue-700 transition shadow-md">
-                Apply Now — 35% Commission
-            </a>
-            <p class="text-xs text-slate-500 mt-6">Approval under 24 hours · Paid monthly</p>
-        </div>
-    </section>
-
-    <!-- ADS SECTION -->
-    <section id="ads" class="max-w-7xl mx-auto px-6 py-24">
-        <h2 class="text-3xl font-black text-center mb-12">Sponsored Picks</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-                <h4 class="text-xl font-bold mb-3">Your Ad Here</h4>
-                <p class="text-slate-600 text-sm mb-4">Promote your AI product or service.</p>
-                <a href="mailto:ads@promptworks.store" class="text-blue-600 font-bold hover:text-blue-700">Sponsor this slot →</a>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-                <h4 class="text-xl font-bold mb-3">AI Tools Marketplace</h4>
-                <p class="text-slate-600 text-sm mb-4">Browse curated tools for automation.</p>
-                <a href="#" class="text-blue-600 font-bold hover:text-blue-700">Explore →</a>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-                <h4 class="text-xl font-bold mb-3">Creator Bundle</h4>
-                <p class="text-slate-600 text-sm mb-4">Get 3 top AI playbooks at a discount.</p>
-                <a href="#" class="text-blue-600 font-bold hover:text-blue-700">Learn More →</a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section id="reviews" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover">
-                <div class="text-blue-500 mb-4 text-xs">★★★★★</div>
-                <p class="text-slate-600 italic mb-6">"The SWOT prompts saved me 10 hours this week. This is a logic system, not a list."</p>
-                <p class="text-xs font-black text-slate-900 uppercase tracking-widest">James D. — Strategy</p>
-            </div>
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover">
-                <div class="text-blue-500 mb-4 text-xs">★★★★★</div>
-                <p class="text-slate-600 italic mb-6">"Finally, prompts that aren't AI fluff. The engineering ones are deployable."</p>
-                <p class="text-xs font-black text-slate-900 uppercase tracking-widest">Sarah K. — Senior Dev</p>
-            </div>
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover">
-                <div class="text-blue-500 mb-4 text-xs">★★★★★</div>
-                <p class="text-slate-600 italic mb-6">"Essential for founders. The structure + constraints make all the difference."</p>
-                <p class="text-xs font-black text-slate-900 uppercase tracking-widest">Marcus L. — Founder</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-slate-400 text-xs font-medium">
-                © 2026 PromptWorks.store. All Rights Reserved. Secure checkout via Stripe.
-            </div>
-            <div class="flex gap-8 text-xs font-bold text-slate-500">
-                <a href="mailto:support@promptworks.store" class="hover:text-blue-600 transition">Support</a>
-                <a href="mailto:partners@promptworks.store" class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full hover:bg-blue-100 transition">Become a Partner (35% Commission)</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function showToast() {
-            const toast = document.getElementById('copyToast');
-            toast.style.display = 'block';
-            setTimeout(() => { toast.style.display = 'none'; }, 2500);
-        }
-        function copyMetaPrompt() {
-            const text = document.getElementById('metaPrompt').innerText;
-            navigator.clipboard.writeText(text).then(showToast);
-        }
-    </script>
-
-</body>
-</html>
+<!-- FOOTER -->
+<footer class="max-w-7xl mx-auto px-6 py-12 text-center text-gray-500 text-xs">
+  © 2026 Kevin Hewitt. All Rights Reserved. Secure checkout via Stripe.  
+  <br><a href="mailto:support@promptworks.store" class="affiliate-link">Support</a>
+</footer>
