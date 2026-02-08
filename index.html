@@ -43,73 +43,78 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
 .glow-architect:hover ~ .fluff-left { opacity: 0.5; }
 </style>
 </head>
-<body class="gradient-bg text-slate-900 selection:bg-blue-100">
+<body class="gradient-bg text-slate-900 selection:bg-blue-100 flex flex-col min-h-screen">
 
-<!-- NAV -->
-<nav class="p-6 flex justify-between items-center max-w-7xl mx-auto fade-up">
-  <div class="text-2xl font-extrabold tracking-tighter flex items-center gap-2">
-    <span class="bg-blue-600 text-white px-2 py-1 rounded">PW</span> PromptWorks
-  </div>
-  <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-600 glow-button">Get the Guide — $29</a>
-</nav>
+<!-- MAIN CONTENT WRAPPER -->
+<div class="flex-1">
 
-<!-- HERO -->
-<header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 fade-up">
-  <h1 class="text-6xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight">
-    <span id="typed-container"></span>
-  </h1>
-  <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-12">
-    Stop asking. Start architecting. Access 1,000 precision prompts across 10 professional domains.
-  </p>
-  <div class="flex flex-col sm:flex-row justify-center gap-4">
-    <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-blue-700 glow-button">Download PromptWorks — $29</a>
-    <a href="#samples" class="bg-white text-slate-900 px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-slate-50">View Samples</a>
-  </div>
-</header>
+  <!-- NAV -->
+  <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto fade-up">
+    <div class="text-2xl font-extrabold tracking-tighter flex items-center gap-2">
+      <span class="bg-blue-600 text-white px-2 py-1 rounded">PW</span> PromptWorks
+    </div>
+    <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-600 glow-button">Get the Guide — $29</a>
+  </nav>
 
-<!-- LOGIC VS FLUFF -->
-<section class="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row gap-12 items-center fade-up">
-  <div class="lg:w-1/2">
-    <h2 class="text-4xl font-black mb-6">The Death of Generic Prompts</h2>
-    <p class="mb-6 text-slate-500 italic">Most people use AI like a toy. You are about to use it as a weapon.</p>
-    <div class="flex gap-6">
-      <!-- Fluff Side -->
-      <div class="w-1/2 p-6 bg-slate-200/30 rounded-xl text-slate-400 italic text-sm fluff-left hover:animate-shake transition-all">
-        Write a business plan for a coffee shop.
-      </div>
-      <!-- Architect Side -->
-      <div class="w-1/2 p-6 bg-black/50 rounded-xl border border-blue-500 text-blue-400 text-sm mono glow-architect">
-        [Role: Senior Strategist] + [Framework: SWOT] + [Constraint: Zero Fluff] + [Objective: Analyze {project_name} for {primary_goal}]
+  <!-- HERO -->
+  <header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 fade-up">
+    <h1 class="text-6xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight">
+      <span id="typed-container"></span>
+    </h1>
+    <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-12">
+      Stop asking. Start architecting. Access 1,000 precision prompts across 10 professional domains.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-blue-700 glow-button">Download PromptWorks — $29</a>
+      <a href="#samples" class="bg-white text-slate-900 px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-slate-50">View Samples</a>
+    </div>
+  </header>
+
+  <!-- LOGIC VS FLUFF -->
+  <section class="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row gap-12 items-center fade-up">
+    <div class="lg:w-1/2">
+      <h2 class="text-4xl font-black mb-6">The Death of Generic Prompts</h2>
+      <p class="mb-6 text-slate-500 italic">Most people use AI like a toy. You are about to use it as a weapon.</p>
+      <div class="flex gap-6">
+        <!-- Fluff Side -->
+        <div class="w-1/2 p-6 bg-slate-200/30 rounded-xl text-slate-400 italic text-sm fluff-left hover:animate-shake transition-all">
+          Write a business plan for a coffee shop.
+        </div>
+        <!-- Architect Side -->
+        <div class="w-1/2 p-6 bg-black/50 rounded-xl border border-blue-500 text-blue-400 text-sm mono glow-architect">
+          [Role: Senior Strategist] + [Framework: SWOT] + [Constraint: Zero Fluff] + [Objective: Analyze {project_name} for {primary_goal}]
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SAMPLES -->
-<section id="samples" class="max-w-7xl mx-auto px-6 py-24 fade-up">
-  <div class="text-center mb-12">
-    <h2 class="text-4xl font-black mb-4">Sample the Logic</h2>
-    <p class="text-slate-500">Click any card to copy the professional prompt structure.</p>
-  </div>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <button onclick="copyPrompt('Use the 5 Whys framework to diagnose root causes of {problem}; propose interventions at each layer.')" class="sample-card p-6 bg-slate-50 rounded-2xl border">
-      Root Cause Analysis
-    </button>
-    <button onclick="copyPrompt('Draft a business model canvas for {venture}; include core assumptions, value chain mapping, and validation tests.')" class="sample-card p-6 bg-slate-50 rounded-2xl border">
-      Business Modeling
-    </button>
-    <button onclick="copyPrompt('Design a system architecture for {feature} that optimizes for {constraint}; include API specs and error-handling logic.')" class="sample-card p-6 bg-slate-50 rounded-2xl border">
-      Engineering Specs
-    </button>
-  </div>
-</section>
+  <!-- SAMPLES -->
+  <section id="samples" class="max-w-7xl mx-auto px-6 py-24 fade-up">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-black mb-4">Sample the Logic</h2>
+      <p class="text-slate-500">Click any card to copy the professional prompt structure.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <button onclick="copyPrompt('Use the 5 Whys framework to diagnose root causes of {problem}; propose interventions at each layer.')" class="sample-card p-6 bg-slate-50 rounded-2xl border">
+        Root Cause Analysis
+      </button>
+      <button onclick="copyPrompt('Draft a business model canvas for {venture}; include core assumptions, value chain mapping, and validation tests.')" class="sample-card p-6 bg-slate-50 rounded-2xl border">
+        Business Modeling
+      </button>
+      <button onclick="copyPrompt('Design a system architecture for {feature} that optimizes for {constraint}; include API specs and error-handling logic.')" class="sample-card p-6 bg-slate-50 rounded-2xl border">
+        Engineering Specs
+      </button>
+    </div>
+  </section>
 
-<!-- FINAL CTA -->
-<section class="max-w-4xl mx-auto px-6 py-32 text-center fade-up">
-  <h2 class="text-5xl font-black mb-6">Own the System</h2>
-  <p class="text-xl text-slate-500 mb-12">Turn AI from a novelty into a high-precision strategic asset.</p>
-  <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-16 py-5 rounded-2xl text-2xl font-black hover:bg-blue-700 glow-button">Download PDF — $29</a>
-</section>
+  <!-- FINAL CTA -->
+  <section class="max-w-4xl mx-auto px-6 py-32 text-center fade-up">
+    <h2 class="text-5xl font-black mb-6">Own the System</h2>
+    <p class="text-xl text-slate-500 mb-12">Turn AI from a novelty into a high-precision strategic asset.</p>
+    <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-16 py-5 rounded-2xl text-2xl font-black hover:bg-blue-700 glow-button">Download PDF — $29</a>
+  </section>
+
+</div> <!-- END MAIN CONTENT WRAPPER -->
 
 <!-- SECTION 1001 GIFT POP-UP -->
 <div id="giftPopup">
@@ -120,70 +125,40 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
 </div>
 
 <!-- FOOTER -->
-<footer class="p-12 text-center text-slate-400 text-xs border-t border-slate-200 mt-auto">
+<footer class="p-12 text-center text-slate-400 text-xs border-t border-slate-200">
   &copy; 2026 PromptWorks. All Rights Reserved.
 </footer>
 
 <script>
 // STACKED TYPING EFFECT
-const lines = [
-  "Architecting [Strategy],",
-  "[Code],",
-  "[Marketing]."
-];
-
+const lines = ["Architecting [Strategy],","[Code],","[Marketing]."];
 const container = document.getElementById("typed-container");
-let lineIndex = 0;
-let charIndex = 0;
+let lineIndex = 0; let charIndex = 0;
 
 function type() {
   if(lineIndex >= lines.length) return;
-  
   let lineSpan = container.querySelector(`span[data-line='${lineIndex}']`);
-  if(!lineSpan) {
-    lineSpan = document.createElement('span');
-    lineSpan.setAttribute('data-line', lineIndex);
-    lineSpan.classList.add('mono');
-    container.appendChild(lineSpan);
-    container.appendChild(document.createElement('br'));
-  }
-
-  lineSpan.textContent = lines[lineIndex].substring(0, charIndex+1) + '|';
+  if(!lineSpan) { lineSpan = document.createElement('span'); lineSpan.setAttribute('data-line', lineIndex); lineSpan.classList.add('mono'); container.appendChild(lineSpan); container.appendChild(document.createElement('br')); }
+  lineSpan.textContent = lines[lineIndex].substring(0,charIndex+1)+'|';
   charIndex++;
-
-  if(charIndex < lines[lineIndex].length){
-    setTimeout(type, 80);
-  } else {
-    lineSpan.textContent = lines[lineIndex]; // remove cursor
-    lineIndex++;
-    charIndex = 0;
-    setTimeout(type, 400);
-  }
+  if(charIndex < lines[lineIndex].length){ setTimeout(type,80); } else { lineSpan.textContent = lines[lineIndex]; lineIndex++; charIndex=0; setTimeout(type,400); }
 }
-
 type();
 
-// Fade-in sections on scroll
+// Fade-in sections
 const faders = document.querySelectorAll('.fade-up');
 const appearOptions = { threshold: 0.2 };
 const appearOnScroll = new IntersectionObserver((entries, observer)=>{
-  entries.forEach(entry => { 
-    if(entry.isIntersecting){ 
-      entry.target.classList.add('show'); 
-      observer.unobserve(entry.target); 
-    } 
-  });
+  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('show'); observer.unobserve(entry.target); } });
 }, appearOptions);
 faders.forEach(fader => appearOnScroll.observe(fader));
 
 // Copy sample function
-function copyPrompt(text){
-  navigator.clipboard.writeText(text).then(()=>alert('Copied!'));
-}
+function copyPrompt(text){ navigator.clipboard.writeText(text).then(()=>alert('Copied!')); }
 
 // Section 1001 gift pop-up
 const giftPopup = document.getElementById('giftPopup');
-setTimeout(()=> giftPopup.classList.add('show'), 4000);
+setTimeout(()=> giftPopup.classList.add('show'),4000);
 function closeGift(){ giftPopup.classList.remove('show'); }
 </script>
 </body>
