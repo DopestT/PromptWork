@@ -6,9 +6,9 @@
 <title>PromptWorks | 1000 Professional AI Prompts</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-body { font-family: 'Inter', sans-serif; margin:0; }
+body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:flex; flex-direction:column; position:relative; }
 .mono { font-family: 'JetBrains Mono', monospace; }
-.gradient-bg { background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%); text-align:center; }
+.gradient-bg { background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%); text-align:center; flex:1; }
 
 /* Buttons */
 .glow-button { box-shadow: 0 0 20px #3b82f6, 0 0 40px #3b82f6, 0 0 60px #3b82f6; transition: all 0.3s ease; }
@@ -29,51 +29,18 @@ body { font-family: 'Inter', sans-serif; margin:0; }
 .sample-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
 .sample-card:hover { transform: translateY(-6px); box-shadow: 0 0 30px #3b82f6; border-color: #3b82f6; }
 
-/* Section 1001 hover tooltip */
-.tooltip { position: relative; display: inline-block; cursor: pointer; }
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 220px;
-  background-color: #2563eb;
-  color: #fff;
-  text-align: center;
-  border-radius: 8px;
-  padding: 8px;
-  position: absolute;
-  z-index: 10;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
+/* Section 1001 pop-up */
+#giftPopup { 
+  position: fixed; bottom: -100%; left: 50%; transform: translateX(-50%); 
+  width: 90%; max-width: 420px; background: rgba(255,255,255,0.9); 
+  backdrop-filter: blur(12px); border-radius: 2rem; padding: 2rem; 
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2); text-align:center; transition: all 0.5s ease-in-out; z-index:1000; 
 }
-.tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
-
-/* Floating unlock button */
-#unlockButton {
-  position: fixed;
-  top: 24px;
-  right: 24px;
-  background: #3b82f6;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 12px;
-  font-weight: bold;
-  z-index: 1000;
-  box-shadow: 0 0 20px #3b82f6, 0 0 40px #3b82f6;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-#unlockButton:hover { transform: translateY(-2px); }
-
-/* Hidden Section 1001 */
-#section1001 { display: none; }
+#giftPopup.show { bottom: 3rem; }
+#giftPopup button.closeGift { position:absolute; top:0.5rem; right:0.5rem; font-weight:bold; background:none; border:none; font-size:1.2rem; cursor:pointer; }
 </style>
 </head>
 <body class="gradient-bg text-slate-900 selection:bg-blue-100">
-
-<!-- FLOATING UNLOCK BUTTON -->
-<div id="unlockButton" onclick="unlockSection1001()">Unlock Section 1001</div>
 
 <!-- NAV -->
 <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto fade-up">
@@ -130,16 +97,6 @@ body { font-family: 'Inter', sans-serif; margin:0; }
   </div>
 </section>
 
-<!-- SECTION 1001 / SECRET BONUS -->
-<section id="section1001" class="max-w-4xl mx-auto px-6 py-24 bg-slate-900 text-white rounded-3xl shadow-2xl border border-blue-600 text-center">
-  <h2 class="text-4xl font-black mb-4 text-blue-400">Section 1001 — Secret Prompt Chain</h2>
-  <p class="italic mb-6">Mini-gift: layered prompts + exclusive discount</p>
-  <div class="tooltip inline-block">
-    <a href="https://www.amazon.com/dp/B0FW5KSWKK" target="_blank" class="inline-block bg-blue-600 text-white px-12 py-5 rounded-2xl font-extrabold hover:bg-blue-700 glow-button">Claim Book Discount</a>
-    <span class="tooltiptext">Includes the Secret God-Mode Chain — 1001 Precision Prompts</span>
-  </div>
-</section>
-
 <!-- FINAL CTA -->
 <section class="max-w-4xl mx-auto px-6 py-32 text-center fade-up">
   <h2 class="text-5xl font-black mb-6">Own the System</h2>
@@ -147,8 +104,16 @@ body { font-family: 'Inter', sans-serif; margin:0; }
   <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-16 py-5 rounded-2xl text-2xl font-black hover:bg-blue-700 glow-button">Download PDF — $29</a>
 </section>
 
+<!-- SECTION 1001 GIFT POP-UP -->
+<div id="giftPopup">
+  <button class="closeGift" onclick="closeGift()">×</button>
+  <h3 class="text-2xl font-black mb-4 text-blue-600">Special Gift!</h3>
+  <p class="mb-6 text-slate-700">As a thank you, get <strong>20% off your copy of the Prompt Hustle book</strong> — instant access!</p>
+  <a href="https://www.amazon.com/Prompt-Hustle-MAKE-100-PROMPTS-ebook/dp/B0FW5KSWKK" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold glow-button">Claim My Discount</a>
+</div>
+
 <!-- FOOTER -->
-<footer class="p-12 text-center text-slate-400 text-xs border-t border-slate-200 fade-up">
+<footer class="p-12 text-center text-slate-400 text-xs border-t border-slate-200 mt-auto">
   &copy; 2026 PromptWorks. All Rights Reserved.
 </footer>
 
@@ -187,7 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     setTimeout(type, isDeleting ? 50 : 100);
   }
-
   type();
 });
 
@@ -209,13 +173,10 @@ function copyPrompt(text){
   navigator.clipboard.writeText(text).then(()=>alert('Copied!'));
 }
 
-// Unlock Section 1001
-function unlockSection1001() {
-  const section = document.getElementById('section1001');
-  section.style.display = 'block';
-  section.scrollIntoView({ behavior: 'smooth' });
-  setTimeout(()=>section.classList.add('fade-up', 'show'), 50);
-}
+// Section 1001 gift pop-up
+const giftPopup = document.getElementById('giftPopup');
+setTimeout(()=> giftPopup.classList.add('show'), 4000); // popup after 4 seconds
+function closeGift(){ giftPopup.classList.remove('show'); }
 </script>
 </body>
 </html>
