@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PromptWorks | Professional AI Architectures (2026)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PromptWorks | Professional AI Architectures (2026)</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
+    body { font-family: 'Inter', sans-serif; }
 
-        /* Glow CTA */
-        .glow-btn {
-            box-shadow: 0 0 20px rgba(59,130,246,0.6), 0 0 40px rgba(59,130,246,0.4);
-            transition: 0.25s ease;
-        }
-        .glow-btn:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 0 30px rgba(59,130,246,0.8), 0 0 60px rgba(59,130,246,0.5);
-        }
+    .mono { font-family: 'JetBrains Mono', monospace; }
 
-        /* Logic vs Fluff Fade */
-        .dimmed {
-            filter: blur(2px) brightness(70%);
-        }
+    /* Glow CTA */
+    .glow-btn {
+        box-shadow: 0 0 20px rgba(59,130,246,0.6), 0 0 40px rgba(59,130,246,0.4);
+        transition: 0.25s ease;
+    }
+    .glow-btn:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 0 30px rgba(59,130,246,0.8), 0 0 60px rgba(59,130,246,0.5);
+    }
 
-        /* Typing Effect */
-        .typing {
-            border-right: 3px solid #2563eb;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: typing 4s steps(40, end), blink .75s step-end infinite;
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink {
-            50% { border-color: transparent }
-        }
+    /* Logic vs Fluff Fade */
+    .dimmed { filter: blur(2px) brightness(70%); }
 
-        /* God Mode Hover */
-        .god-hover:hover {
-            box-shadow: 0 0 30px rgba(59,130,246,0.5);
-            transform: translateY(-6px);
-        }
+    /* Typing Effect */
+    .typing {
+        border-right: 3px solid #2563eb;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 4s steps(40, end), blink .75s step-end infinite;
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    @keyframes blink {
+        50% { border-color: transparent }
+    }
 
-        .mono { font-family: 'JetBrains Mono', monospace; }
-    </style>
+    /* God Mode Hover */
+    .god-hover:hover {
+        box-shadow: 0 0 30px rgba(59,130,246,0.5);
+        transform: translateY(-6px);
+    }
+
+    /* Book Cover Hover (Punchy) */
+    .book-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .book-hover:hover {
+        transform: scale(1.08) rotate(-2deg);
+        box-shadow: 0 0 50px rgba(59,130,246,0.8);
+        z-index: 10;
+    }
+</style>
 </head>
 
 <body class="bg-gradient-to-br from-slate-50 to-slate-100 text-slate-900">
@@ -105,8 +113,6 @@
     <h2 class="text-4xl font-black text-center mb-12">Logic vs. Fluff</h2>
 
     <div class="grid lg:grid-cols-2 gap-12">
-
-        <!-- Fluff -->
         <div class="bg-white border border-slate-200 rounded-3xl p-10 shadow-sm dimmed">
             <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">Generic Prompt</h3>
             <p class="text-xl text-slate-600 italic">
@@ -114,7 +120,6 @@
             </p>
         </div>
 
-        <!-- Architect -->
         <div class="bg-slate-900 border border-blue-500/40 rounded-3xl p-10 shadow-xl">
             <h3 class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Architect Mode</h3>
             <pre class="mono text-blue-200 text-sm leading-relaxed">
@@ -132,19 +137,11 @@
     </p>
 </section>
 
-<!-- Existing Features (your original content stays) -->
-<!-- =============================== -->
-<!-- (I will not rewrite this block) -->
-<!-- =============================== -->
-
-<!-- SAMPLES (original preserved) -->
 <!-- PRICING WITH GOD MODE HOVER -->
 <section id="pricing" class="max-w-6xl mx-auto px-6 py-24">
     <h2 class="text-4xl font-black text-center mb-16">Choose Your Access</h2>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        <!-- Basic -->
         <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm">
             <h3 class="font-bold text-xl mb-4">Starter</h3>
             <p class="text-slate-600 mb-6">The essentials to get started.</p>
@@ -155,13 +152,11 @@
             </a>
         </div>
 
-        <!-- Strategist (God Mode Hover) -->
         <div class="bg-white p-10 rounded-3xl border border-blue-400 shadow-xl god-hover relative">
             <h3 class="font-bold text-xl text-blue-600 mb-4">Strategist</h3>
             <p class="text-slate-600 mb-6">Full access + professional add-ons.</p>
             <p class="text-4xl font-black mb-6">$59</p>
 
-            <!-- God Mode Bubble -->
             <div class="absolute -top-4 right-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full shadow-lg animate-pulse">
                 Includes Section 1001
             </div>
@@ -172,7 +167,6 @@
             </a>
         </div>
 
-        <!-- Pro -->
         <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm">
             <h3 class="font-bold text-xl mb-4">Pro Team</h3>
             <p class="text-slate-600 mb-6">Team license + priority updates.</p>
@@ -185,7 +179,7 @@
     </div>
 </section>
 
-<!-- SECTION 1001 WITH BOOK COVER -->
+<!-- SECTION 1001 WITH CLOUDINARY BOOK COVER -->
 <section id="section1001" class="max-w-6xl mx-auto px-6 py-24">
     <div class="bg-slate-900 rounded-[2.5rem] p-10 shadow-3xl border border-slate-800 relative overflow-hidden">
 
@@ -193,8 +187,8 @@
 
         <div class="grid lg:grid-cols-2 gap-12 relative z-10">
 
-            <div class="rounded-2xl overflow-hidden border border-slate-700 shadow-xl">
-                <img src="https://drive.google.com/uc?export=view&id=1e81t688vpgY2aoz5QAYxqg03Osf_sbr8"
+            <div class="rounded-2xl overflow-hidden border border-slate-700 shadow-xl book-hover">
+                <img src="https://collection.cloudinary.com/dzej3yrev/3bdfa071a5f5a93941eebd0b5cbf1d1b"
                      class="w-full h-full object-cover" alt="Prompt Hustle Book Cover">
             </div>
 
@@ -220,7 +214,7 @@
                 </ul>
 
                 <a href="#pricing"
-                   class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl text-lg font-extrabold shadow-2xl shadow-blue-500/30 transition hover:-translate-y-1">
+                   class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl text-lg font-extrabold shadow-2xl shadow-blue-500/30 transition hover:-translate-y-1 glow-btn">
                     Unlock Section 1001
                 </a>
             </div>
@@ -244,15 +238,6 @@
 <footer class="p-12 text-center text-slate-400 text-xs border-t border-slate-200">
     &copy; 2026 PromptWorks. All Rights Reserved.
 </footer>
-
-<!-- COPY SCRIPT -->
-<script>
-function showToast() {
-    const t = document.getElementById("copyToast");
-    t.style.display = "block";
-    setTimeout(()=>{ t.style.display="none"; }, 2000);
-}
-</script>
 
 </body>
 </html>
