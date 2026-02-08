@@ -1,149 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PromptWorks | 1,000 Professional AI Prompts</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PromptWorks — 1,000 Professional AI Prompts</title>
 
-<!-- Tailwind CDN -->
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-/* Glow Button */
-.glow-btn {
-  box-shadow: 0 0 20px rgba(59,130,246,0.4);
-  transition: 0.2s ease;
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
 }
-.glow-btn:hover {
-  box-shadow: 0 0 35px rgba(59,130,246,0.7);
-}
-
-/* Typing container */
-.typing p {
-  opacity: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #fff;
-}
-
 </style>
-</head>
 
-<body class="bg-[#f8f9fd] text-slate-800">
+</head>
+<body class="bg-white text-slate-800">
+
+<!-- HEADER -->
+<header class="border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="font-bold text-lg">PromptWorks</div>
+    <nav class="hidden md:flex gap-10 text-sm text-slate-600">
+      <a href="#features" class="hover:text-black">Features</a>
+      <a href="#package" class="hover:text-black">Package</a>
+      <a href="#bonus" class="hover:text-black">Section 1001</a>
+      <a href="#cta" class="hover:text-black font-medium">Buy Now</a>
+    </nav>
+  </div>
+</header>
 
 <!-- HERO -->
-<section class="max-w-7xl mx-auto px-6 pt-32 pb-24 text-center">
-  <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-10">1,000 Proven AI Prompts for Real Work</h1>
+<section class="max-w-6xl mx-auto px-6 py-24">
+  <div class="md:flex md:items-start md:justify-between gap-16">
 
-  <!-- Typing Effect -->
-  <div class="text-2xl lg:text-3xl font-bold text-blue-600 typing leading-snug space-y-2">
-    <p>Stop guessing.</p>
-    <p>Stop rewriting junk outputs.</p>
-    <p>Architect results—on command.</p>
+    <!-- LEFT -->
+    <div class="max-w-xl">
+      <h1 class="text-4xl font-bold leading-tight mb-6">
+        1,000 Expert-Level Prompts for Real Work
+      </h1>
+
+      <p class="text-lg text-slate-600 mb-10">
+        A complete prompt system for marketing, research, content creation, planning, and productivity. 
+        Built to produce consistent, reliable, high-quality AI outputs.
+      </p>
+
+      <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
+         class="inline-block bg-slate-900 text-white px-8 py-4 rounded-lg text-sm font-semibold">
+         Get PromptWorks — $29
+      </a>
+
+      <p class="text-xs text-slate-500 mt-3">
+        Instant digital download. Yours for life.
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hidden md:block w-80 h-56 border border-slate-200 rounded-xl"></div>
+
   </div>
-
-  <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
-     class="mt-12 inline-block glow-btn bg-blue-600 text-white px-12 py-5 rounded-3xl text-xl font-extrabold hover:bg-blue-700 transition">
-    Get the 1,000 Prompt System — $29
-  </a>
 </section>
 
 <!-- FEATURES -->
-<section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-10">
-  <div class="p-8 bg-white rounded-3xl shadow text-center">
-    <h3 class="font-bold text-xl mb-3">10 Professional Domains</h3>
-    <p>Marketing, scripting, analysis, planning, systems, content, and more.</p>
-  </div>
-  <div class="p-8 bg-white rounded-3xl shadow text-center">
-    <h3 class="font-bold text-xl mb-3">Precision Frameworks</h3>
-    <p>Built-in constraints and placeholder variables to fit any project.</p>
-  </div>
-  <div class="p-8 bg-white rounded-3xl shadow text-center">
-    <h3 class="font-bold text-xl mb-3">Fast, Predictable Outputs</h3>
-    <p>Every prompt engineered for clarity, speed, and repeatability.</p>
+<section id="features" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200">
+  <h2 class="text-2xl font-bold mb-12">What’s Inside</h2>
+
+  <div class="grid md:grid-cols-3 gap-12 text-slate-600 text-sm">
+
+    <div>
+      <h3 class="font-semibold text-slate-900 mb-3">Structured Frameworks</h3>
+      <p>Prompts are organized into clean, repeatable templates for clarity and reliability.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-slate-900 mb-3">Professionally Engineered</h3>
+      <p>Each prompt is built with constraints, variables, and instructions for consistent results.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-slate-900 mb-3">Real-World Tested</h3>
+      <p>Prompts validated across marketing, scripting, planning, research, and more.</p>
+    </div>
+
   </div>
 </section>
 
-<!-- PACKAGE SECTION -->
-<section id="package" class="max-w-7xl mx-auto px-6 py-24 bg-white rounded-[3rem] shadow-sm border border-slate-100">
-    <div class="text-center mb-16">
-        <h2 class="text-4xl font-black mb-4">Your PromptWorks Package</h2>
-        <p class="text-slate-500 max-w-2xl mx-auto">Everything you need to produce elite AI output — not just a PDF.</p>
+<!-- PACKAGE -->
+<section id="package" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200">
+  <h2 class="text-2xl font-bold mb-12">Your Package</h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-sm text-slate-700">
+
+    <div class="p-6 border border-slate-200 rounded-xl">
+      <div class="text-xs font-semibold text-slate-500 mb-2">PDF</div>
+      <p>1,000 structured prompts across 10 domains.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- Core PDF -->
-        <div class="group p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition shadow-lg hover:shadow-2xl">
-            <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Core PDF</span>
-            <p class="text-slate-700 font-medium italic mb-4">1,000 precision prompts across 10 domains. Clean, actionable, high-performance.</p>
-        </div>
-
-        <!-- Meta Prompt -->
-        <div class="group p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition shadow-lg hover:shadow-2xl">
-            <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Meta-Prompt</span>
-            <p class="text-slate-700 font-medium italic mb-4">Starter framework to maximize the PDF’s power inside any AI model.</p>
-        </div>
-
-        <!-- Section 1001 Bonus -->
-        <div class="group relative p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition shadow-lg hover:shadow-2xl">
-            <span class="inline-block mb-4 px-3 py-1 bg-gradient-to-r from-blue-400 to-indigo-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full">
-                Section 1001 Bonus
-            </span>
-            <p class="text-slate-700 font-medium italic mb-4">A hidden advanced chain that supercharges your results. Included as a premium bonus.</p>
-            <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition">
-                INCLUDED
-            </div>
-        </div>
-
-        <!-- Video -->
-        <div class="group p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition shadow-lg hover:shadow-2xl">
-            <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Video Guide</span>
-            <p class="text-slate-700 font-medium italic mb-4">Short, high-impact walkthrough on using prompts like a professional operator.</p>
-        </div>
-
-        <!-- Cheat Sheet -->
-        <div class="group p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition shadow-lg hover:shadow-2xl">
-            <span class="inline-block mb-4 px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full">Cheat Sheet</span>
-            <p class="text-slate-700 font-medium italic mb-4">Quick-reference PDF with the 10 strongest prompts from the book.</p>
-        </div>
-
-        <!-- Discount -->
-        <div class="group relative p-8 bg-slate-50 rounded-3xl border-2 border-transparent hover:border-blue-500 transition shadow-lg hover:shadow-2xl">
-            <span class="inline-block mb-4 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-[10px] font-black uppercase tracking-widest rounded-full">
-                Early Buyer Bonus
-            </span>
-            <p class="text-slate-700 font-medium italic mb-4">Exclusive 20% discount on your book purchase included with your package.</p>
-            <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition">
-                BONUS
-            </div>
-        </div>
-
+    <div class="p-6 border border-slate-200 rounded-xl">
+      <div class="text-xs font-semibold text-slate-500 mb-2">Meta Prompt</div>
+      <p>A universal prompt to strengthen and refine any output.</p>
     </div>
+
+    <div class="p-6 border border-slate-200 rounded-xl">
+      <div class="text-xs font-semibold text-slate-500 mb-2">Section 1001 (Bonus)</div>
+      <p>An advanced prompt chain included quietly in the package.</p>
+    </div>
+
+    <div class="p-6 border border-slate-200 rounded-xl">
+      <div class="text-xs font-semibold text-slate-500 mb-2">Cheat Sheet</div>
+      <p>Quick-access PDF with 10 of the highest-performing prompts.</p>
+    </div>
+
+    <div class="p-6 border border-slate-200 rounded-xl">
+      <div class="text-xs font-semibold text-slate-500 mb-2">Video Guide</div>
+      <p>A brief walkthrough on using structured prompts effectively.</p>
+    </div>
+
+    <div class="p-6 border border-slate-200 rounded-xl">
+      <div class="text-xs font-semibold text-slate-500 mb-2">Discount</div>
+      <p>Early buyer discount for your book purchase, included inside.</p>
+    </div>
+
+  </div>
 </section>
 
-<!-- LOGIC VS FLUFF -->
-<section class="max-w-7xl mx-auto px-6 py-24">
-  <h2 class="text-4xl font-black text-center mb-12">Logic Beats Fluff</h2>
+<!-- BONUS SECTION -->
+<section id="bonus" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200">
+  <h2 class="text-2xl font-bold mb-6">Section 1001</h2>
+  <p class="text-slate-600 max-w-2xl text-sm">
+    Section 1001 is a concise, advanced prompt chain designed to expand the output potential 
+    of any AI model. It’s included as a quiet bonus inside your package and can be used to 
+    enhance, refine, and structure complex tasks.
+  </p>
+</section>
 
-  <div class="grid md:grid-cols-2 gap-12">
+<!-- COMPARISON -->
+<section class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200">
+  <h2 class="text-2xl font-bold mb-12">Before and After</h2>
 
-    <div class="p-8 bg-white rounded-3xl shadow border border-slate-200">
-      <h3 class="font-bold text-2xl mb-4">Without PromptWorks</h3>
-      <ul class="space-y-3 text-slate-600">
-        <li>• Random outputs</li>
-        <li>• Inconsistent tone</li>
-        <li>• Wasted hours editing</li>
-        <li>• Guessing what AI wants</li>
+  <div class="grid md:grid-cols-2 gap-12 text-sm">
+
+    <div class="border border-slate-200 rounded-xl p-8">
+      <h3 class="font-semibold text-slate-900 mb-3">Without PromptWorks</h3>
+      <ul class="text-slate-600 space-y-2">
+        <li>• Unpredictable outputs</li>
+        <li>• Rewriting results manually</li>
+        <li>• Inconsistent structure</li>
       </ul>
     </div>
 
-    <div class="p-8 bg-blue-600 text-white rounded-3xl shadow">
-      <h3 class="font-bold text-2xl mb-4">With PromptWorks</h3>
-      <ul class="space-y-3">
-        <li>• Clean structure</li>
-        <li>• Predictable responses</li>
-        <li>• Clear constraints</li>
+    <div class="border border-slate-200 rounded-xl p-8">
+      <h3 class="font-semibold text-slate-900 mb-3">With PromptWorks</h3>
+      <ul class="text-slate-600 space-y-2">
+        <li>• Clear structure</li>
+        <li>• Consistent outputs</li>
         <li>• Faster workflows</li>
       </ul>
     </div>
@@ -152,54 +162,21 @@
 </section>
 
 <!-- CTA -->
-<section id="cta" class="max-w-7xl mx-auto px-6 py-24 text-center bg-blue-600 rounded-[3rem] shadow-2xl">
-  <h2 class="text-5xl font-black text-white mb-6">Stop Guessing. Start Producing.</h2>
-  <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
-    1,000 professional prompts. 10 domains. Section 1001 bonus included.
-  </p>
+<section id="cta" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200 text-center">
+  <h2 class="text-3xl font-bold mb-6">Upgrade your workflow.</h2>
+
   <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
-     class="glow-btn bg-white text-blue-600 px-12 py-5 rounded-3xl font-extrabold hover:bg-blue-50 transition shadow-xl inline-block">
-    Download PromptWorks — $29
+     class="inline-block bg-slate-900 text-white px-10 py-4 rounded-lg text-sm font-semibold">
+    Get PromptWorks — $29
   </a>
+
+  <p class="text-xs text-slate-500 mt-3">Instant digital delivery.</p>
 </section>
 
 <!-- FOOTER -->
-<footer class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-200 text-slate-500 text-sm text-center">
-    <p>&copy; 2026 PromptWorks. All rights reserved.</p>
-    <p class="text-xs mt-4">Secure checkout powered by Stripe. Instant delivery.</p>
+<footer class="border-t border-slate-200 py-12 text-center text-xs text-slate-500">
+  &copy; 2026 PromptWorks. All rights reserved.
 </footer>
-
-<!-- TYPING EFFECT SCRIPT -->
-<script>
-const lines = document.querySelectorAll('.typing p');
-let current = 0;
-
-function typeLine(el, cb) {
-  const text = el.textContent;
-  el.textContent = '';
-  el.style.opacity = 1;
-  let i = 0;
-  const iv = setInterval(() => {
-    el.textContent += text[i];
-    i++;
-    if (i >= text.length) {
-      clearInterval(iv);
-      setTimeout(cb, 300);
-    }
-  }, 65);
-}
-
-function runTyping() {
-  if (current < lines.length) {
-    typeLine(lines[current], () => {
-      current++;
-      runTyping();
-    });
-  }
-}
-
-runTyping();
-</script>
 
 </body>
 </html>
