@@ -3,98 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tools I Use + Love | Kevin Hewitt</title>
+<title>Things I Use & Affiliate Program | Kevin Hewitt</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-  body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #111827; }
-  .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+  body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #111827; scroll-behavior: smooth; }
+  header, nav { background: linear-gradient(135deg,#4f46e5,#3b82f6); color: white; }
+  nav a { color: white; font-weight: 600; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
   .affiliate-link { color: #3b82f6; font-weight: 600; text-decoration: underline; }
-  header { background: linear-gradient(135deg,#4f46e5,#3b82f6); color: white; }
+  section { scroll-margin-top: 80px; }
+  .card-hover:hover { transform: translateY(-3px); transition: all 0.3s ease; }
 </style>
 </head>
-<body class="">
+<body>
+
+<!-- NAVIGATION -->
+<nav class="sticky top-0 z-50 py-4 px-6 flex justify-center gap-8 shadow-md">
+  <a href="#things-i-use">Things I Use</a>
+  <a href="#affiliate-program">Affiliate Program</a>
+</nav>
 
 <!-- HEADER -->
-<header class="py-20 text-center">
-  <h1 class="text-5xl font-black mb-4">Tools I Use + Love</h1>
-  <p class="text-lg max-w-2xl mx-auto">A curated list of my favorite AI and productivity tools, with affiliate links for your convenience.</p>
+<header class="py-16 text-center">
+  <h1 class="text-5xl font-black mb-4">Things I Use & Affiliate Program</h1>
+  <p class="text-lg max-w-2xl mx-auto">A curated list of AI, productivity, and web tools I personally use, plus my affiliate program for partners.</p>
 </header>
 
-<!-- BOOK HERO -->
-<section class="max-w-5xl mx-auto px-6 py-16 text-center">
-  <img src="/mnt/data/A_webpage_titled_\"Tools_I_Use_+_Love\"_features_Kev.png" 
-       alt="Prompt Hustle Handbook" class="mx-auto mb-8 rounded-xl shadow-xl border border-gray-300 w-64 h-64 object-cover">
-  <h2 class="text-3xl font-bold mb-4">The Prompt Hustle Handbook</h2>
-  <p class="text-gray-700 mb-6">Your guide to making $100/day using AI prompt systems. Zero-fluff, action-oriented, and ready for execution.</p>
-  <a href="YOUR_BOOK_AFFILIATE_LINK" 
-     class="bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-emerald-700 transition">
-     Get the Handbook — 10% Off
-  </a>
+<!-- THINGS I USE SECTION -->
+<section id="things-i-use" class="max-w-5xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-bold mb-8">Tools & Services I Personally Use</h2>
+  <ul class="space-y-4 text-gray-700 text-lg">
+    <li>✔ <span class="font-semibold">Prompt Hustle Handbook</span> – My guide to $100/day AI prompt systems. <a href="YOUR_BOOK_AFFILIATE_LINK" class="affiliate-link">Get it here →</a></li>
+    <li>✔ <span class="font-semibold">Pictory</span> – AI video editor for scripts & videos. <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Pictory →</a></li>
+    <li>✔ <span class="font-semibold">Zapier</span> – Automate workflows across apps. <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Zapier →</a></li>
+    <li>✔ <span class="font-semibold">Webflow</span> – No-code website builder with clean code export. <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Webflow →</a></li>
+    <li>✔ <span class="font-semibold">ConvertKit</span> – Email marketing for creators. <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get ConvertKit →</a></li>
+    <li>✔ <span class="font-semibold">Hostinger</span> – Reliable hosting with fast servers. <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Hostinger →</a></li>
+    <li>✔ <span class="font-semibold">Writesonic</span> – AI writing assistant for blogs, ads, and emails. <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Writesonic →</a></li>
+  </ul>
 </section>
 
-<!-- FEATURED TOOLS -->
-<section class="max-w-7xl mx-auto px-6 py-16">
-  <h2 class="text-4xl font-black text-center mb-12">Featured Recommendations</h2>
-  <div class="grid md:grid-cols-3 gap-8">
-    
-    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
-      <h3 class="font-bold text-xl mb-2">Pictory</h3>
-      <p class="text-gray-600 mb-3">AI video editor to turn scripts into engaging videos quickly.</p>
-      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Pictory →</a>
-    </div>
-    
-    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
-      <h3 class="font-bold text-xl mb-2">Zapier</h3>
-      <p class="text-gray-600 mb-3">Automate workflows across apps and save hours weekly.</p>
-      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Zapier →</a>
-    </div>
-    
-    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
-      <h3 class="font-bold text-xl mb-2">Webflow</h3>
-      <p class="text-gray-600 mb-3">Build no-code websites with design flexibility and clean code export.</p>
-      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Webflow →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ADDITIONAL TOOLS -->
-<section class="max-w-7xl mx-auto px-6 py-16 bg-gray-50 rounded-xl">
-  <h2 class="text-3xl font-bold text-center mb-12">Everyday Apps & Tools</h2>
-  <div class="grid md:grid-cols-3 gap-8">
-    
-    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
-      <h3 class="font-bold text-lg mb-2">ConvertKit</h3>
-      <p class="text-gray-600 mb-3">Email marketing for creators with automated funnels and list growth tools.</p>
-      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get ConvertKit →</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
-      <h3 class="font-bold text-lg mb-2">Hostinger</h3>
-      <p class="text-gray-600 mb-3">Reliable hosting with fast servers and great uptime.</p>
-      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Hostinger →</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
-      <h3 class="font-bold text-lg mb-2">Writesonic</h3>
-      <p class="text-gray-600 mb-3">AI writing assistant for blogs, ads, emails, and more.</p>
-      <a href="YOUR_AFFILIATE_LINK" class="affiliate-link">Get Writesonic →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- AFFILIATE PROGRAM -->
-<section class="max-w-7xl mx-auto px-6 py-16">
-  <h2 class="text-3xl font-black text-center mb-8">Affiliate Program</h2>
-  <p class="text-center text-gray-700 mb-8">Earn <span class="font-bold text-blue-600">35% commissions</span> promoting my products and tools.</p>
-  <div class="text-center">
+<!-- AFFILIATE PROGRAM SECTION -->
+<section id="affiliate-program" class="max-w-5xl mx-auto px-6 py-16 bg-gray-50 rounded-xl text-center">
+  <h2 class="text-3xl font-bold mb-6">Affiliate Program</h2>
+  <p class="text-gray-700 mb-6 text-lg">Promote my products and earn <span class="font-bold text-blue-600">35% commissions</span>. Instant approval, 30-day cookie, and monthly payouts.</p>
+  <div class="mb-8">
     <a href="mailto:partners@promptworks.store" 
        class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 transition">
        Apply Now → 35% Commission
     </a>
   </div>
+
+  <h3 class="text-2xl font-bold mb-4">Tools You Can Promote</h3>
+  <ul class="space-y-2 text-gray-700 text-lg max-w-3xl mx-auto">
+    <li>✔ Prompt Hustle Handbook</li>
+    <li>✔ Pictory</li>
+    <li>✔ Zapier</li>
+    <li>✔ Webflow</li>
+    <li>✔ ConvertKit</li>
+    <li>✔ Hostinger</li>
+    <li>✔ Writesonic</li>
+  </ul>
 </section>
 
 <!-- FOOTER -->
@@ -102,3 +72,6 @@
   © 2026 Kevin Hewitt. All Rights Reserved. Secure checkout via Stripe.  
   <br><a href="mailto:support@promptworks.store" class="affiliate-link">Support</a>
 </footer>
+
+</body>
+</html>
