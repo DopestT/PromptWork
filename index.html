@@ -1,193 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PromptWorks — Professional Prompt System</title>
-
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<style>
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
-  background: #f2f2f2; /* light gray to prevent washout */
-}
-
-/* Apple fade */
-.fade {
-  opacity: 0;
-  animation: fadeIn 0.8s ease forwards;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* New hero gradient with real contrast */
-.hero-bg {
-  background: linear-gradient(180deg, #f8f8f8, #ffffff 60%);
-}
-
-/* Section contrast */
-.section-bg {
-  background: #ffffff;
-  border-radius: 32px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptWorks | 1000 Professional AI Prompts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .copy-toast {
+            display: none; position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            background: #0f172a; color: #f8fafc; padding: 14px 28px; border-radius: 12px;
+            font-weight: 600; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2); z-index: 100;
+        }
+        .gradient-bg { background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%); }
+        .card-hover:hover { transform: translateY(-5px); border-color: #3b82f6; transition: all 0.3s ease; }
+    </style>
 </head>
-<body class="text-slate-900">
+<body class="gradient-bg text-slate-900 selection:bg-blue-100">
 
-<!-- HEADER -->
-<header class="h-20 flex items-center bg-white shadow-sm">
-  <div class="max-w-6xl mx-auto px-6 flex items-center justify-between w-full">
-    <div class="text-xl font-semibold tracking-tight">PromptWorks</div>
-    <nav class="hidden md:flex gap-10 text-sm text-slate-600">
-      <a href="#features" class="hover:text-black transition">Features</a>
-      <a href="#package" class="hover:text-black transition">Package</a>
-      <a href="#section1001" class="hover:text-black transition">Section 1001</a>
-      <a href="#cta" class="hover:text-black transition font-medium">Buy</a>
+    <div class="bg-blue-600 text-white py-3 px-4 text-center text-[10px] md:text-sm font-extrabold tracking-widest uppercase sticky top-0 z-50">
+        🚀 LAUNCH SPECIAL: Get the full 1,000 Prompt Collection for $29 — 24H LEFT 
+    </div>
+
+    <div id="copyToast" class="copy-toast italic">Copied to clipboard!</div>
+
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto glass sticky top-[40px] z-40 rounded-b-3xl border-x border-b border-slate-100">
+        <div class="text-xl font-extrabold tracking-tighter text-slate-900 flex items-center gap-2">
+            <span class="bg-blue-600 text-white px-2 py-0.5 rounded">PW</span> PromptWorks
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-bold text-slate-500">
+            <a href="#features" class="hover:text-blue-600 transition">Domains</a>
+            <a href="#samples" class="hover:text-blue-600 transition">Samples</a>
+            <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
+        </div>
+        <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-slate-900 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-600 transition-all text-xs shadow-lg">Get PromptWorks — $29</a>
     </nav>
-  </div>
-</header>
 
-<!-- HERO -->
-<section class="hero-bg py-32 fade">
-  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+    <header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center">
+        <h1 class="text-5xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight text-slate-900">
+            Sophisticated AI. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Zero Fluff.</span>
+        </h1>
+        <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
+            Stop asking. Start architecting. 1,000 precision prompts built on the framework of placeholders and constraints.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-blue-700 shadow-2xl shadow-blue-500/30 transition-all hover:-translate-y-1">Download the Collection</a>
+            <a href="#samples" class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-slate-50 transition">View Samples</a>
+        </div>
+    </header>
 
-    <!-- LEFT -->
-    <div>
-      <h1 class="text-5xl md:text-6xl font-semibold leading-tight tracking-tight mb-8">
-        1,000 Expert Prompts.<br> One Clean System.
-      </h1>
+    <section class="max-w-5xl mx-auto px-6 mb-32">
+        <div class="bg-slate-950 rounded-[2.5rem] p-8 lg:p-12 shadow-3xl border border-slate-800 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full"></div>
+            <div class="flex flex-col lg:flex-row gap-10 items-center relative z-10">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-black text-white mb-4">Step 0: Prime the AI</h2>
+                    <p class="text-slate-400 leading-relaxed mb-6 italic">"The prompt that makes all other prompts work."</p>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                    <div class="relative group">
+                        <pre id="metaPrompt" class="mono text-[12px] leading-relaxed bg-black p-6 rounded-2xl border border-slate-800 text-blue-300 whitespace-pre-wrap">Act as a professional collaborator using the 1000 AI Prompts framework. Resolve placeholders in {brackets} and adhere to constraints. Deliver rigorous, actionable insights without fluff.</pre>
+                        <button onclick="copyMetaPrompt()" class="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-blue-500 transition">Copy Primer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <p class="text-lg text-slate-600 leading-relaxed mb-12">
-        A professional toolkit of structured prompts for marketing, research, content, planning, 
-        and workflow optimization—designed for consistent, high-quality results.
-      </p>
+    <section id="reviews" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-100">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover">
+                <div class="text-blue-500 mb-4 text-xs">★★★★★</div>
+                <p class="text-slate-600 italic mb-6">"The SWOT prompts in Section 1 saved me 10+ hours this week. This is a logic system, not just a list."</p>
+                <p class="text-xs font-black text-slate-900 uppercase tracking-widest">James D. — Strategy</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover">
+                <div class="text-blue-500 mb-4 text-xs">★★★★★</div>
+                <p class="text-slate-600 italic mb-6">"Finally, prompts that don't sound like 'AI fluff.' The engineering placeholders are actually deployable."</p>
+                <p class="text-xs font-black text-slate-900 uppercase tracking-widest">Sarah K. — Senior Dev</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover">
+                <div class="text-blue-500 mb-4 text-xs">★★★★★</div>
+                <p class="text-slate-600 italic mb-6">"Essential for founders. The structural rigor and constraints make all the difference in output."</p>
+                <p class="text-xs font-black text-slate-900 uppercase tracking-widest">Marcus L. — Founder</p>
+            </div>
+        </div>
+    </section>
 
-      <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
-        class="inline-block bg-black text-white px-10 py-4 rounded-full text-sm font-medium tracking-wide shadow-sm">
-        Get PromptWorks — $29
-      </a>
+    <footer class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-200">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-slate-400 text-xs font-medium">
+                © 2026 PromptWorks.store. All Rights Reserved. Secure checkout via Stripe.
+            </div>
+            <div class="flex gap-8 text-xs font-bold text-slate-500">
+                <a href="mailto:support@promptworks.store" class="hover:text-blue-600 transition">Support</a>
+                <a href="#" onclick="alert('Affiliate Program: Email partners@promptworks.store with your social links to receive your custom 35% commission link.')" class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full hover:bg-blue-100 transition">Become a Partner (35% Commission)</a>
+            </div>
+        </div>
+    </footer>
 
-      <p class="text-xs text-slate-500 mt-4">Instant digital download.</p>
-    </div>
-
-    <!-- RIGHT Placeholder -->
-    <div class="hidden md:block">
-      <div class="w-full h-72 rounded-3xl bg-white shadow-md border border-slate-200"></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section id="features" class="py-32">
-  <div class="max-w-6xl mx-auto px-6 section-bg p-16">
-
-    <h2 class="text-3xl font-semibold tracking-tight mb-16">
-      Designed for Professional Output
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-16 text-slate-700 text-sm leading-relaxed">
-
-      <div>
-        <h3 class="text-lg font-medium mb-3">Structured frameworks</h3>
-        <p>Prompts built with clarity and constraints for predictable results.</p>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-medium mb-3">Expert engineering</h3>
-        <p>Optimized across 10 real-world domains for performance.</p>
-      </div>
-
-      <div>
-        <h3 class="text-lg font-medium mb-3">Consistent workflow</h3>
-        <p>A system that reduces guesswork and eliminates re-writing.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- PACKAGE -->
-<section id="package" class="py-32">
-  <div class="max-w-6xl mx-auto px-6 section-bg p-16">
-
-    <h2 class="text-3xl font-semibold tracking-tight mb-16">What You Get</h2>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-sm text-slate-700 leading-relaxed">
-
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <div class="text-xs font-semibold text-slate-500 mb-2">Core PDF</div>
-        <p>1,000 structured prompts across 10 domains.</p>
-      </div>
-
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <div class="text-xs font-semibold text-slate-500 mb-2">Meta Prompt</div>
-        <p>A powerful universal prompt to elevate any output.</p>
-      </div>
-
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <div class="text-xs font-semibold text-slate-500 mb-2">Section 1001 (Bonus)</div>
-        <p>An advanced chain included quietly inside the package.</p>
-      </div>
-
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <div class="text-xs font-semibold text-slate-500 mb-2">Cheat Sheet</div>
-        <p>Quick-access sheet with high-performance prompts.</p>
-      </div>
-
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <div class="text-xs font-semibold text-slate-500 mb-2">Video Guide</div>
-        <p>A short tutorial for applying structured prompts effectively.</p>
-      </div>
-
-      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <div class="text-xs font-semibold text-slate-500 mb-2">Discount</div>
-        <p>Early buyer discount for your book included inside.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- SECTION 1001 -->
-<section id="section1001" class="py-32">
-  <div class="max-w-6xl mx-auto px-6 section-bg p-16">
-
-    <h2 class="text-3xl font-semibold tracking-tight mb-6">Section 1001</h2>
-
-    <p class="text-slate-600 leading-relaxed text-base max-w-2xl">
-      Section 1001 is a refined, advanced prompt chain engineered to expand the capability of 
-      any AI model. Included discreetly inside PromptWorks, it offers deeper structure, 
-      improved reasoning, and enhanced clarity for complex tasks.
-    </p>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section id="cta" class="py-32 text-center section-bg mx-6 fade max-w-6xl mx-auto">
-  <h2 class="text-4xl font-semibold mb-10">Upgrade Your Workflow</h2>
-
-  <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00"
-    class="inline-block bg-black text-white px-12 py-4 rounded-full text-sm font-medium tracking-wide shadow-md">
-    Get PromptWorks — $29
-  </a>
-
-  <p class="text-xs text-slate-500 mt-4">Instant download. Lifetime use.</p>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-16 text-center text-xs text-slate-500">
-  © 2026 PromptWorks. All rights reserved.
-</footer>
-
+    <script>
+        function showToast() {
+            const toast = document.getElementById('copyToast');
+            toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 2500);
+        }
+        function copySample(button) {
+            const text = button.querySelector('p').innerText;
+            navigator.clipboard.writeText(text).then(showToast);
+        }
+        function copyMetaPrompt() {
+            const text = document.getElementById('metaPrompt').innerText;
+            navigator.clipboard.writeText(text).then(showToast);
+        }
+    </script>
 </body>
 </html>
