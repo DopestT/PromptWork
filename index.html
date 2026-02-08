@@ -8,7 +8,7 @@
 <style>
 body { font-family: 'Inter', sans-serif; margin:0; }
 .mono { font-family: 'JetBrains Mono', monospace; }
-.gradient-bg { background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%); }
+.gradient-bg { background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%); text-align:center; }
 
 /* Buttons */
 .glow-button { box-shadow: 0 0 20px #3b82f6, 0 0 40px #3b82f6, 0 0 60px #3b82f6; transition: all 0.3s ease; }
@@ -65,12 +65,15 @@ body { font-family: 'Inter', sans-serif; margin:0; }
   transition: transform 0.2s ease;
 }
 #unlockButton:hover { transform: translateY(-2px); }
+
+/* Hidden Section 1001 */
+#section1001 { display: none; }
 </style>
 </head>
 <body class="gradient-bg text-slate-900 selection:bg-blue-100">
 
 <!-- FLOATING UNLOCK BUTTON -->
-<div id="unlockButton" onclick="scrollToSection1001()">Unlock Section 1001</div>
+<div id="unlockButton" onclick="unlockSection1001()">Unlock Section 1001</div>
 
 <!-- NAV -->
 <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto fade-up">
@@ -81,7 +84,7 @@ body { font-family: 'Inter', sans-serif; margin:0; }
 </nav>
 
 <!-- HERO -->
-<header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center fade-up">
+<header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 fade-up">
   <h1 class="text-6xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight">
     <span id="typed-text" class="typing"></span>
   </h1>
@@ -106,9 +109,6 @@ body { font-family: 'Inter', sans-serif; margin:0; }
       </div>
     </div>
   </div>
-  <div class="lg:w-1/2 text-center">
-    <img src="https://collection.cloudinary.com/dzej3yrev/3bdfa071a5f5a93941eebd0b5cbf1d1b" alt="Prompt Hustle Book Cover" class="rounded-3xl shadow-xl mx-auto">
-  </div>
 </section>
 
 <!-- SAMPLES -->
@@ -130,11 +130,10 @@ body { font-family: 'Inter', sans-serif; margin:0; }
   </div>
 </section>
 
-<!-- SECTION 1001 / ARCHITECT CHAIN GIFT -->
-<section id="section1001" class="max-w-4xl mx-auto px-6 py-24 bg-slate-900 text-white rounded-3xl shadow-2xl border border-blue-600 text-center fade-up">
-  <h2 class="text-4xl font-black mb-4 text-blue-400">Section 1001 — Architect Chain</h2>
-  <p class="italic mb-6">Mini-gift: layered prompts + book discount</p>
-  <img src="https://collection.cloudinary.com/dzej3yrev/3bdfa071a5f5a93941eebd0b5cbf1d1b" alt="Book Cover" class="mx-auto rounded-xl shadow-xl w-48 mb-6">
+<!-- SECTION 1001 / SECRET BONUS -->
+<section id="section1001" class="max-w-4xl mx-auto px-6 py-24 bg-slate-900 text-white rounded-3xl shadow-2xl border border-blue-600 text-center">
+  <h2 class="text-4xl font-black mb-4 text-blue-400">Section 1001 — Secret Prompt Chain</h2>
+  <p class="italic mb-6">Mini-gift: layered prompts + exclusive discount</p>
   <div class="tooltip inline-block">
     <a href="https://www.amazon.com/dp/B0FW5KSWKK" target="_blank" class="inline-block bg-blue-600 text-white px-12 py-5 rounded-2xl font-extrabold hover:bg-blue-700 glow-button">Claim Book Discount</a>
     <span class="tooltiptext">Includes the Secret God-Mode Chain — 1001 Precision Prompts</span>
@@ -154,9 +153,13 @@ body { font-family: 'Inter', sans-serif; margin:0; }
 </footer>
 
 <script>
-// Typing effect
+// Typing effect — multi-line stacked
 document.addEventListener("DOMContentLoaded", () => {
-  const phrases = ["Architecting [Strategy], [Code], [Marketing]."];
+  const phrases = [
+    "Architecting [Strategy],",
+    "[Code],",
+    "[Marketing]."
+  ];
   let i = 0, j = 0, currentText = '', isDeleting = false;
   const typedText = document.getElementById('typed-text');
 
@@ -164,16 +167,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const fullText = phrases[i];
     if (!isDeleting) {
       currentText = fullText.substring(0, j + 1);
-      typedText.textContent = currentText;
+      typedText.innerHTML = phrases.slice(0, i).join('<br>') + (i > 0 ? '<br>' : '') + currentText;
       j++;
       if (currentText === fullText) { 
         isDeleting = true; 
-        setTimeout(type, 1500); 
+        setTimeout(type, 800); 
         return; 
       }
     } else {
       currentText = fullText.substring(0, j - 1);
-      typedText.textContent = currentText;
+      typedText.innerHTML = phrases.slice(0, i).join('<br>') + (i > 0 ? '<br>' : '') + currentText;
       j--;
       if (currentText === '') { 
         isDeleting = false; 
@@ -206,9 +209,12 @@ function copyPrompt(text){
   navigator.clipboard.writeText(text).then(()=>alert('Copied!'));
 }
 
-// Scroll to Section 1001
-function scrollToSection1001() {
-  document.getElementById('section1001').scrollIntoView({ behavior: 'smooth' });
+// Unlock Section 1001
+function unlockSection1001() {
+  const section = document.getElementById('section1001');
+  section.style.display = 'block';
+  section.scrollIntoView({ behavior: 'smooth' });
+  setTimeout(()=>section.classList.add('fade-up', 'show'), 50);
 }
 </script>
 </body>
