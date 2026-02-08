@@ -9,17 +9,31 @@
 body { font-family: 'Inter', sans-serif; margin:0; }
 .mono { font-family: 'JetBrains Mono', monospace; }
 .gradient-bg { background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%); }
+
+/* Buttons */
 .glow-button { box-shadow: 0 0 20px #3b82f6, 0 0 40px #3b82f6, 0 0 60px #3b82f6; transition: all 0.3s ease; }
 .glow-button:hover { box-shadow: 0 0 25px #2563eb, 0 0 50px #2563eb, 0 0 75px #2563eb; transform: translateY(-2px); }
-.sample-card { transition: all 0.3s ease; }
-.sample-card:hover { box-shadow: 0 0 25px #3b82f6, 0 0 50px #3b82f6; transform: translateY(-4px); border-color: #3b82f6; }
-.typing { border-right: 2px solid #3b82f6; white-space: nowrap; overflow: hidden; }
+
+/* Typing */
+.typing { border-right: 2px solid #3b82f6; white-space: nowrap; overflow: hidden; display:inline-block; }
+
+/* Fade-in on scroll */
+.fade-up { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+.fade-up.show { opacity: 1; transform: translateY(0); }
+
+/* Logic vs Fluff */
+.fluff-left { filter: blur(3px); transition: all 0.4s ease; }
+.fluff-left:hover { filter: blur(0); }
+
+/* Sample cards */
+.sample-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+.sample-card:hover { transform: translateY(-6px); box-shadow: 0 0 30px #3b82f6; border-color: #3b82f6; }
 </style>
 </head>
 <body class="gradient-bg text-slate-900 selection:bg-blue-100">
 
 <!-- NAV -->
-<nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+<nav class="p-6 flex justify-between items-center max-w-7xl mx-auto fade-up">
   <div class="text-2xl font-extrabold tracking-tighter flex items-center gap-2">
     <span class="bg-blue-600 text-white px-2 py-1 rounded">PW</span> PromptWorks
   </div>
@@ -27,7 +41,7 @@ body { font-family: 'Inter', sans-serif; margin:0; }
 </nav>
 
 <!-- HERO -->
-<header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center">
+<header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center fade-up">
   <h1 class="text-6xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight">
     <span id="typed-text" class="typing"></span>
   </h1>
@@ -41,11 +55,12 @@ body { font-family: 'Inter', sans-serif; margin:0; }
 </header>
 
 <!-- LOGIC VS FLUFF -->
-<section class="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row gap-12 items-center">
+<section class="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row gap-12 items-center fade-up">
   <div class="lg:w-1/2">
     <h2 class="text-4xl font-black mb-6">The Death of Generic Prompts</h2>
+    <p class="mb-6 text-slate-500 italic">Most people use AI like a toy. You are about to use it as a weapon.</p>
     <div class="flex gap-6">
-      <div class="w-1/2 p-6 bg-slate-200/30 rounded-xl text-slate-400 italic text-sm">Write a business plan for a coffee shop.</div>
+      <div class="w-1/2 p-6 bg-slate-200/30 rounded-xl text-slate-400 italic text-sm fluff-left">Write a business plan for a coffee shop.</div>
       <div class="w-1/2 p-6 bg-black/50 rounded-xl border border-blue-500 text-blue-400 text-sm mono">
         [Role: Senior Strategist] + [Framework: SWOT] + [Constraint: Zero Fluff] + [Objective: Analyze {project_name} for {primary_goal}]
       </div>
@@ -57,7 +72,7 @@ body { font-family: 'Inter', sans-serif; margin:0; }
 </section>
 
 <!-- SAMPLES -->
-<section id="samples" class="max-w-7xl mx-auto px-6 py-24">
+<section id="samples" class="max-w-7xl mx-auto px-6 py-24 fade-up">
   <div class="text-center mb-12">
     <h2 class="text-4xl font-black mb-4">Sample the Logic</h2>
     <p class="text-slate-500">Click any card to copy the professional prompt structure.</p>
@@ -76,7 +91,7 @@ body { font-family: 'Inter', sans-serif; margin:0; }
 </section>
 
 <!-- SECTION 1001 / ARCHITECT CHAIN -->
-<section class="max-w-4xl mx-auto px-6 py-24 bg-slate-900 text-white rounded-3xl shadow-2xl border border-blue-600 text-center">
+<section class="max-w-4xl mx-auto px-6 py-24 bg-slate-900 text-white rounded-3xl shadow-2xl border border-blue-600 text-center fade-up">
   <h2 class="text-4xl font-black mb-4 text-blue-400">The Architect Chain — Section 1001</h2>
   <p class="italic mb-6">Mini-gift: layered prompts + book discount</p>
   <img src="https://collection.cloudinary.com/dzej3yrev/3bdfa071a5f5a93941eebd0b5cbf1d1b" alt="Book Cover" class="mx-auto rounded-xl shadow-xl w-48 mb-6">
@@ -84,19 +99,19 @@ body { font-family: 'Inter', sans-serif; margin:0; }
 </section>
 
 <!-- FINAL CTA -->
-<section class="max-w-4xl mx-auto px-6 py-32 text-center">
+<section class="max-w-4xl mx-auto px-6 py-32 text-center fade-up">
   <h2 class="text-5xl font-black mb-6">Own the System</h2>
   <p class="text-xl text-slate-500 mb-12">Turn AI from a novelty into a high-precision strategic asset.</p>
   <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-16 py-5 rounded-2xl text-2xl font-black hover:bg-blue-700 glow-button">Download PDF — $29</a>
 </section>
 
 <!-- FOOTER -->
-<footer class="p-12 text-center text-slate-400 text-xs border-t border-slate-200">
+<footer class="p-12 text-center text-slate-400 text-xs border-t border-slate-200 fade-up">
   &copy; 2026 PromptWorks. All Rights Reserved.
 </footer>
 
 <script>
-// Typing effect for Hero
+// Typing effect
 const phrases = ["Architecting [Strategy], [Code], [Marketing]."];
 let i = 0, j = 0, currentText = '', isDeleting = false;
 const typedText = document.getElementById('typed-text');
@@ -117,12 +132,20 @@ function type() {
   }
   setTimeout(type, isDeleting ? 50 : 100);
 }
+document.addEventListener("DOMContentLoaded", () => type());
+
+// Fade-in sections on scroll
+const faders = document.querySelectorAll('.fade-up');
+const appearOptions = { threshold: 0.2 };
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('show'); observer.unobserve(entry.target); } });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
 
 // Copy sample function
 function copyPrompt(text){
   navigator.clipboard.writeText(text).then(()=>alert('Copied!'));
 }
 </script>
-
 </body>
 </html>
