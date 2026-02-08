@@ -28,9 +28,49 @@ body { font-family: 'Inter', sans-serif; margin:0; }
 /* Sample cards */
 .sample-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
 .sample-card:hover { transform: translateY(-6px); box-shadow: 0 0 30px #3b82f6; border-color: #3b82f6; }
+
+/* Section 1001 hover tooltip */
+.tooltip { position: relative; display: inline-block; cursor: pointer; }
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #2563eb;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
+
+/* Floating unlock button */
+#unlockButton {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: #3b82f6;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 0 20px #3b82f6, 0 0 40px #3b82f6;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#unlockButton:hover { transform: translateY(-2px); }
 </style>
 </head>
 <body class="gradient-bg text-slate-900 selection:bg-blue-100">
+
+<!-- FLOATING UNLOCK BUTTON -->
+<div id="unlockButton" onclick="scrollToSection1001()">Unlock Section 1001</div>
 
 <!-- NAV -->
 <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto fade-up">
@@ -90,12 +130,15 @@ body { font-family: 'Inter', sans-serif; margin:0; }
   </div>
 </section>
 
-<!-- SECTION 1001 / ARCHITECT CHAIN -->
-<section class="max-w-4xl mx-auto px-6 py-24 bg-slate-900 text-white rounded-3xl shadow-2xl border border-blue-600 text-center fade-up">
-  <h2 class="text-4xl font-black mb-4 text-blue-400">The Architect Chain — Section 1001</h2>
+<!-- SECTION 1001 / ARCHITECT CHAIN GIFT -->
+<section id="section1001" class="max-w-4xl mx-auto px-6 py-24 bg-slate-900 text-white rounded-3xl shadow-2xl border border-blue-600 text-center fade-up">
+  <h2 class="text-4xl font-black mb-4 text-blue-400">Section 1001 — Architect Chain</h2>
   <p class="italic mb-6">Mini-gift: layered prompts + book discount</p>
   <img src="https://collection.cloudinary.com/dzej3yrev/3bdfa071a5f5a93941eebd0b5cbf1d1b" alt="Book Cover" class="mx-auto rounded-xl shadow-xl w-48 mb-6">
-  <a href="https://www.amazon.com/dp/B0FW5KSWKK" target="_blank" class="inline-block bg-blue-600 text-white px-12 py-5 rounded-2xl font-extrabold hover:bg-blue-700 glow-button">Claim Book Discount</a>
+  <div class="tooltip inline-block">
+    <a href="https://www.amazon.com/dp/B0FW5KSWKK" target="_blank" class="inline-block bg-blue-600 text-white px-12 py-5 rounded-2xl font-extrabold hover:bg-blue-700 glow-button">Claim Book Discount</a>
+    <span class="tooltiptext">Includes the Secret God-Mode Chain — 1001 Precision Prompts</span>
+  </div>
 </section>
 
 <!-- FINAL CTA -->
@@ -161,6 +204,11 @@ faders.forEach(fader => appearOnScroll.observe(fader));
 // Copy sample function
 function copyPrompt(text){
   navigator.clipboard.writeText(text).then(()=>alert('Copied!'));
+}
+
+// Scroll to Section 1001
+function scrollToSection1001() {
+  document.getElementById('section1001').scrollIntoView({ behavior: 'smooth' });
 }
 </script>
 </body>
