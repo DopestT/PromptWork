@@ -14,9 +14,6 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
 .glow-button { box-shadow: 0 0 20px #3b82f6, 0 0 40px #3b82f6, 0 0 60px #3b82f6; transition: all 0.3s ease; }
 .glow-button:hover { box-shadow: 0 0 25px #2563eb, 0 0 50px #2563eb, 0 0 75px #2563eb; transform: translateY(-2px); }
 
-/* Typing */
-.typing { border-right: 2px solid #3b82f6; white-space: pre; display:inline-block; }
-
 /* Fade-in on scroll */
 .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
 .fade-up.show { opacity: 1; transform: translateY(0); }
@@ -59,7 +56,7 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
 <!-- HERO -->
 <header class="max-w-7xl mx-auto px-6 py-20 lg:py-32 fade-up">
   <h1 class="text-6xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight">
-    <span id="typed-text" class="typing"></span>
+    <span id="typed-container"></span>
   </h1>
   <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-12">
     Stop asking. Start architecting. Access 1,000 precision prompts across 10 professional domains.
@@ -70,7 +67,7 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
   </div>
 </header>
 
-<!-- LOGIC VS FLUFF (UPGRADED) -->
+<!-- LOGIC VS FLUFF -->
 <section class="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row gap-12 items-center fade-up">
   <div class="lg:w-1/2">
     <h2 class="text-4xl font-black mb-6">The Death of Generic Prompts</h2>
@@ -128,33 +125,43 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
 </footer>
 
 <script>
-// Multi-line stacked typing effect
-document.addEventListener("DOMContentLoaded", () => {
-  const phrases = [
-    "Architecting [Strategy],",
-    "[Code],",
-    "[Marketing]."
-  ];
-  const typedText = document.getElementById('typed-text');
-  let lineIndex = 0;
-  let charIndex = 0;
+// STACKED TYPING EFFECT
+const lines = [
+  "Architecting [Strategy],",
+  "[Code],",
+  "[Marketing]."
+];
 
-  function typeLine() {
-    if (lineIndex >= phrases.length) return;
-    const line = phrases[lineIndex];
-    typedText.innerHTML = typedText.innerHTML.replace(/\|$/, '') + line.substring(0, charIndex + 1) + '|';
-    charIndex++;
-    if (charIndex < line.length) {
-      setTimeout(typeLine, 80);
-    } else {
-      typedText.innerHTML = typedText.innerHTML.replace(/\|$/, '') + '<br>';
-      lineIndex++;
-      charIndex = 0;
-      setTimeout(typeLine, 400);
-    }
+const container = document.getElementById("typed-container");
+let lineIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if(lineIndex >= lines.length) return;
+  
+  let lineSpan = container.querySelector(`span[data-line='${lineIndex}']`);
+  if(!lineSpan) {
+    lineSpan = document.createElement('span');
+    lineSpan.setAttribute('data-line', lineIndex);
+    lineSpan.classList.add('mono');
+    container.appendChild(lineSpan);
+    container.appendChild(document.createElement('br'));
   }
-  typeLine();
-});
+
+  lineSpan.textContent = lines[lineIndex].substring(0, charIndex+1) + '|';
+  charIndex++;
+
+  if(charIndex < lines[lineIndex].length){
+    setTimeout(type, 80);
+  } else {
+    lineSpan.textContent = lines[lineIndex]; // remove cursor
+    lineIndex++;
+    charIndex = 0;
+    setTimeout(type, 400);
+  }
+}
+
+type();
 
 // Fade-in sections on scroll
 const faders = document.querySelectorAll('.fade-up');
