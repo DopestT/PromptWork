@@ -15,29 +15,35 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
 .glow-button:hover { box-shadow: 0 0 25px #2563eb, 0 0 50px #2563eb, 0 0 75px #2563eb; transform: translateY(-2px); }
 
 /* Typing */
-.typing { border-right: 2px solid #3b82f6; white-space: nowrap; overflow: hidden; display:inline-block; }
+.typing { border-right: 2px solid #3b82f6; white-space: pre; display:inline-block; }
 
 /* Fade-in on scroll */
 .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
 .fade-up.show { opacity: 1; transform: translateY(0); }
 
-/* Logic vs Fluff */
-.fluff-left { filter: blur(3px); transition: all 0.4s ease; }
-.fluff-left:hover { filter: blur(0); }
-
 /* Sample cards */
-.sample-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+.sample-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; cursor:pointer; }
 .sample-card:hover { transform: translateY(-6px); box-shadow: 0 0 30px #3b82f6; border-color: #3b82f6; }
 
 /* Section 1001 pop-up */
 #giftPopup { 
   position: fixed; bottom: -100%; left: 50%; transform: translateX(-50%); 
-  width: 90%; max-width: 420px; background: rgba(255,255,255,0.9); 
+  width: 90%; max-width: 420px; background: rgba(255,255,255,0.95); 
   backdrop-filter: blur(12px); border-radius: 2rem; padding: 2rem; 
   box-shadow: 0 20px 50px rgba(0,0,0,0.2); text-align:center; transition: all 0.5s ease-in-out; z-index:1000; 
 }
 #giftPopup.show { bottom: 3rem; }
 #giftPopup button.closeGift { position:absolute; top:0.5rem; right:0.5rem; font-weight:bold; background:none; border:none; font-size:1.2rem; cursor:pointer; }
+
+/* Logic vs Fluff */
+.glow-architect { box-shadow: 0 0 20px #3b82f6, 0 0 40px #3b82f6, 0 0 60px #3b82f6; transition: all 0.3s ease; }
+.glow-architect:hover { box-shadow: 0 0 25px #2563eb, 0 0 50px #2563eb, 0 0 75px #2563eb; transform: scale(1.06); }
+@keyframes shake { 0%,100%{transform:translateX(0);} 20%,60%{transform:translateX(-2px);} 40%,80%{transform:translateX(2px);} }
+.animate-shake { animation: shake 0.4s ease-in-out infinite; }
+/* Hover dim opposite side */
+.fluff-left:hover { filter: blur(0); }
+.fluff-left:hover ~ .glow-architect { opacity: 0.7; }
+.glow-architect:hover ~ .fluff-left { opacity: 0.5; }
 </style>
 </head>
 <body class="gradient-bg text-slate-900 selection:bg-blue-100">
@@ -64,14 +70,18 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
   </div>
 </header>
 
-<!-- LOGIC VS FLUFF -->
+<!-- LOGIC VS FLUFF (UPGRADED) -->
 <section class="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row gap-12 items-center fade-up">
   <div class="lg:w-1/2">
     <h2 class="text-4xl font-black mb-6">The Death of Generic Prompts</h2>
     <p class="mb-6 text-slate-500 italic">Most people use AI like a toy. You are about to use it as a weapon.</p>
     <div class="flex gap-6">
-      <div class="w-1/2 p-6 bg-slate-200/30 rounded-xl text-slate-400 italic text-sm fluff-left">Write a business plan for a coffee shop.</div>
-      <div class="w-1/2 p-6 bg-black/50 rounded-xl border border-blue-500 text-blue-400 text-sm mono">
+      <!-- Fluff Side -->
+      <div class="w-1/2 p-6 bg-slate-200/30 rounded-xl text-slate-400 italic text-sm fluff-left hover:animate-shake transition-all">
+        Write a business plan for a coffee shop.
+      </div>
+      <!-- Architect Side -->
+      <div class="w-1/2 p-6 bg-black/50 rounded-xl border border-blue-500 text-blue-400 text-sm mono glow-architect">
         [Role: Senior Strategist] + [Framework: SWOT] + [Constraint: Zero Fluff] + [Objective: Analyze {project_name} for {primary_goal}]
       </div>
     </div>
@@ -118,41 +128,32 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
 </footer>
 
 <script>
-// Typing effect — multi-line stacked
+// Multi-line stacked typing effect
 document.addEventListener("DOMContentLoaded", () => {
   const phrases = [
     "Architecting [Strategy],",
     "[Code],",
     "[Marketing]."
   ];
-  let i = 0, j = 0, currentText = '', isDeleting = false;
   const typedText = document.getElementById('typed-text');
+  let lineIndex = 0;
+  let charIndex = 0;
 
-  function type() {
-    const fullText = phrases[i];
-    if (!isDeleting) {
-      currentText = fullText.substring(0, j + 1);
-      typedText.innerHTML = phrases.slice(0, i).join('<br>') + (i > 0 ? '<br>' : '') + currentText;
-      j++;
-      if (currentText === fullText) { 
-        isDeleting = true; 
-        setTimeout(type, 800); 
-        return; 
-      }
+  function typeLine() {
+    if (lineIndex >= phrases.length) return;
+    const line = phrases[lineIndex];
+    typedText.innerHTML = typedText.innerHTML.replace(/\|$/, '') + line.substring(0, charIndex + 1) + '|';
+    charIndex++;
+    if (charIndex < line.length) {
+      setTimeout(typeLine, 80);
     } else {
-      currentText = fullText.substring(0, j - 1);
-      typedText.innerHTML = phrases.slice(0, i).join('<br>') + (i > 0 ? '<br>' : '') + currentText;
-      j--;
-      if (currentText === '') { 
-        isDeleting = false; 
-        i = (i + 1) % phrases.length; 
-        setTimeout(type, 300); 
-        return; 
-      }
+      typedText.innerHTML = typedText.innerHTML.replace(/\|$/, '') + '<br>';
+      lineIndex++;
+      charIndex = 0;
+      setTimeout(typeLine, 400);
     }
-    setTimeout(type, isDeleting ? 50 : 100);
   }
-  type();
+  typeLine();
 });
 
 // Fade-in sections on scroll
@@ -175,7 +176,7 @@ function copyPrompt(text){
 
 // Section 1001 gift pop-up
 const giftPopup = document.getElementById('giftPopup');
-setTimeout(()=> giftPopup.classList.add('show'), 4000); // popup after 4 seconds
+setTimeout(()=> giftPopup.classList.add('show'), 4000);
 function closeGift(){ giftPopup.classList.remove('show'); }
 </script>
 </body>
