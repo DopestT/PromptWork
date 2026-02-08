@@ -21,9 +21,7 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
   animation: pulseGlow 2.5s infinite ease-in-out;
   transition: transform 0.3s ease;
 }
-.glow-button:hover {
-  transform: translateY(-2px);
-}
+.glow-button:hover { transform: translateY(-2px); }
 
 /* Fade-in on scroll */
 .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
@@ -33,15 +31,15 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
 .sample-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; cursor:pointer; }
 .sample-card:hover { transform: translateY(-6px); box-shadow: 0 0 30px #3b82f6; border-color: #3b82f6; }
 
-/* Section 1001 pop-up */
-#giftPopup { 
+/* Architect Bonus pop-up */
+#bonusPopup { 
   position: fixed; bottom: -100%; left: 50%; transform: translateX(-50%); 
   width: 90%; max-width: 420px; background: rgba(255,255,255,0.95); 
   backdrop-filter: blur(12px); border-radius: 2rem; padding: 2rem; 
   box-shadow: 0 20px 50px rgba(0,0,0,0.2); text-align:center; transition: all 0.5s ease-in-out; z-index:1000; 
 }
-#giftPopup.show { bottom: 3rem; }
-#giftPopup button.closeGift { position:absolute; top:0.5rem; right:0.5rem; font-weight:bold; background:none; border:none; font-size:1.2rem; cursor:pointer; }
+#bonusPopup.show { bottom: 3rem; }
+#bonusPopup button.closeBonus { position:absolute; top:0.5rem; right:0.5rem; font-weight:bold; background:none; border:none; font-size:1.2rem; cursor:pointer; }
 
 /* Logic vs Fluff */
 .glow-architect { box-shadow: 0 0 20px #3b82f6, 0 0 40px #3b82f6, 0 0 60px #3b82f6; transition: all 0.3s ease; }
@@ -121,17 +119,18 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
       Turn AI from a novelty into a high-precision strategic asset.
     </p>
     <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" 
-       class="bg-blue-600 text-white px-16 py-5 rounded-2xl text-2xl font-black glow-button">
+       class="bg-blue-600 text-white px-16 py-5 rounded-2xl text-2xl font-black glow-button" 
+       title="Unlock the Architect Bonus">
        Download PDF — $29
     </a>
   </section>
 
 </div> <!-- END MAIN CONTENT WRAPPER -->
 
-<!-- SECTION 1001 GIFT POP-UP -->
-<div id="giftPopup">
-  <button class="closeGift" onclick="closeGift()">×</button>
-  <h3 class="text-2xl font-black mb-4 text-blue-600">Special Gift!</h3>
+<!-- ARCHITECT BONUS POP-UP -->
+<div id="bonusPopup">
+  <button class="closeBonus" onclick="closeBonus()">×</button>
+  <h3 class="text-2xl font-black mb-4 text-blue-600">Exclusive Architect Bonus</h3>
   <p class="mb-6 text-slate-700">As a thank you, get <strong>20% off your copy of the Prompt Hustle book</strong> — instant access!</p>
   <a href="https://www.amazon.com/Prompt-Hustle-MAKE-100-PROMPTS-ebook/dp/B0FW5KSWKK" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold glow-button">Claim My Discount</a>
 </div>
@@ -167,10 +166,10 @@ faders.forEach(fader => appearOnScroll.observe(fader));
 // Copy sample function
 function copyPrompt(text){ navigator.clipboard.writeText(text).then(()=>alert('Copied!')); }
 
-// Section 1001 gift pop-up
-const giftPopup = document.getElementById('giftPopup');
-setTimeout(()=> giftPopup.classList.add('show'),4000);
-function closeGift(){ giftPopup.classList.remove('show'); }
+// Architect Bonus pop-up
+const bonusPopup = document.getElementById('bonusPopup');
+setTimeout(()=> bonusPopup.classList.add('show'),4000);
+function closeBonus(){ bonusPopup.classList.remove('show'); }
 </script>
 </body>
 </html>
