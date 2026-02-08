@@ -6,6 +6,7 @@
 <title>PromptWorks | 1000 Professional AI Prompts</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
 body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:flex; flex-direction:column; position:relative; }
 .mono { font-family: 'JetBrains Mono', monospace; }
 .gradient-bg { background: radial-gradient(circle at top left, #f8fafc 0%, #f1f5f9 100%); text-align:center; flex:1; }
@@ -37,10 +38,6 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
 .glow-architect:hover { box-shadow: 0 0 25px #2563eb, 0 0 50px #2563eb, 0 0 75px #2563eb; transform: scale(1.06); }
 @keyframes shake { 0%,100%{transform:translateX(0);} 20%,60%{transform:translateX(-2px);} 40%,80%{transform:translateX(2px);} }
 .animate-shake { animation: shake 0.4s ease-in-out infinite; }
-/* Hover dim opposite side */
-.fluff-left:hover { filter: blur(0); }
-.fluff-left:hover ~ .glow-architect { opacity: 0.7; }
-.glow-architect:hover ~ .fluff-left { opacity: 0.5; }
 </style>
 </head>
 <body class="gradient-bg text-slate-900 selection:bg-blue-100 flex flex-col min-h-screen">
@@ -77,7 +74,7 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
       <p class="mb-6 text-slate-500 italic">Most people use AI like a toy. You are about to use it as a weapon.</p>
       <div class="flex gap-6">
         <!-- Fluff Side -->
-        <div class="w-1/2 p-6 bg-slate-200/30 rounded-xl text-slate-400 italic text-sm fluff-left hover:animate-shake transition-all">
+        <div class="w-1/2 p-6 bg-slate-200/30 rounded-xl text-slate-400 italic text-sm animate-shake">
           Write a business plan for a coffee shop.
         </div>
         <!-- Architect Side -->
@@ -107,11 +104,16 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="max-w-4xl mx-auto px-6 py-32 text-center fade-up">
-    <h2 class="text-5xl font-black mb-6">Own the System</h2>
-    <p class="text-xl text-slate-500 mb-12">Turn AI from a novelty into a high-precision strategic asset.</p>
-    <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="bg-blue-600 text-white px-16 py-5 rounded-2xl text-2xl font-black hover:bg-blue-700 glow-button">Download PDF — $29</a>
+  <!-- FINAL CTA - OWN THE SYSTEM -->
+  <section class="max-w-4xl mx-auto px-6 py-20 text-center fade-up">
+    <h2 class="text-5xl lg:text-6xl font-black mb-6 leading-tight">Own the System</h2>
+    <p class="text-xl lg:text-2xl text-slate-500 mb-12 leading-relaxed">
+      Turn AI from a novelty into a high-precision strategic asset.
+    </p>
+    <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" 
+       class="bg-blue-600 text-white px-16 py-5 rounded-2xl text-2xl font-black hover:bg-blue-700 glow-button">
+       Download PDF — $29
+    </a>
   </section>
 
 </div> <!-- END MAIN CONTENT WRAPPER -->
@@ -134,7 +136,6 @@ body { font-family: 'Inter', sans-serif; margin:0; min-height:100vh; display:fle
 const lines = ["Architecting [Strategy],","[Code],","[Marketing]."];
 const container = document.getElementById("typed-container");
 let lineIndex = 0; let charIndex = 0;
-
 function type() {
   if(lineIndex >= lines.length) return;
   let lineSpan = container.querySelector(`span[data-line='${lineIndex}']`);
