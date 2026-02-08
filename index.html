@@ -226,3 +226,70 @@
   <div class="god-card bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-center text-white shadow-2xl relative hover-lift">
     <span class="god-bubble">Includes Secret God-Mode Chain (Section 1001)</span>
     <h2 class="text-4xl
+    <h2 class="text-4xl lg:text-6xl font-black mb-6">Unlock the Ultimate AI Workflow</h2>
+    <p class="text-lg max-w-2xl mx-auto mb-8">
+      Every professional prompt, every framework, every shortcut — delivered in one complete system. Section 1001 is your VIP key to advanced outputs.
+    </p>
+    <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="glow-btn bg-white text-blue-600 px-12 py-5 rounded-2xl font-extrabold hover:bg-blue-50 transition shadow-xl inline-block">
+      Activate God-Mode — $59
+    </a>
+</section>
+
+<!-- FINAL CALL TO ACTION -->
+<section id="cta" class="max-w-7xl mx-auto px-6 py-24 text-center bg-blue-600 rounded-[3rem] shadow-2xl">
+  <h2 class="text-5xl font-black text-white mb-6">Stop Asking. Start Architecting.</h2>
+  <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
+    Get access to 1,000 precision prompts, Meta-Prompt frameworks, cheat sheets, and the God-Mode Chain — all in one premium package.
+  </p>
+  <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="glow-btn bg-white text-blue-600 px-12 py-5 rounded-3xl font-extrabold hover:bg-blue-50 transition shadow-xl inline-block">
+    Download PromptWorks — $29
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-200 text-slate-500 text-sm">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+    <p>&copy; 2026 PromptWorks. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="#" class="hover:text-slate-900 transition">Privacy Policy</a>
+      <a href="#" class="hover:text-slate-900 transition">Terms of Service</a>
+      <a href="#" class="hover:text-slate-900 transition">Contact</a>
+    </div>
+  </div>
+  <p class="mt-6 text-center text-xs text-slate-400">Secure checkout powered by Stripe. Instant PDF delivery guaranteed.</p>
+</footer>
+
+<!-- TYPING EFFECT SCRIPT -->
+<script>
+const typingElement = document.querySelector('.typing');
+const lines = Array.from(typingElement.children);
+let currentLine = 0;
+
+function typeLine(line, callback) {
+    const text = line.textContent;
+    line.textContent = '';
+    let i = 0;
+    const interval = setInterval(() => {
+        line.textContent += text[i];
+        i++;
+        if (i >= text.length) {
+            clearInterval(interval);
+            callback();
+        }
+    }, 60);
+}
+
+function startTyping() {
+    if (currentLine < lines.length) {
+        typeLine(lines[currentLine], () => {
+            currentLine++;
+            startTyping();
+        });
+    }
+}
+
+startTyping();
+</script>
+
+</body>
+</html>
