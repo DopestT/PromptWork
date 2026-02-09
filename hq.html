@@ -8,9 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
     
     <style>
-        :root { --bg-deep: #050505; --accent-gold: #d4af37; }
+        :root { 
+            --bg-deep: #050505; 
+            --accent-gold: #d4af37; 
+        }
         body { 
-            background-color: var(--bg-deep); color: #f8fafc; font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep); 
+            color: #f8fafc; 
+            font-family: 'Inter', sans-serif;
+            background-image: 
+                linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .gold-text { color: var(--accent-gold); }
