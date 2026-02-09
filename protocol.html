@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Protocol | Architect's Manifesto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-deep: #050505;
+            --accent-blue: #3b82f6;
+        }
+        body { 
+            background-color: var(--bg-deep); color: #f8fafc; font-family: 'Inter', sans-serif;
+            background-image: radial-gradient(circle at top center, #1e293b 0%, #050505 40%);
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--accent-blue);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="pt-24 pb-20">
+
+    <div class="fixed top-0 w-full z-[100] bg-black/90 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto flex justify-center gap-6 md:gap-12 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+            <a href="https://profitnichehub.online" class="hover:text-white">01_The_Lab</a>
+            <a href="#" class="text-blue-500 cursor-default">02_Protocol</a> <a href="https://promptworks.store" class="hover:text-white">03_Vault</a>
+            <a href="https://profitnichehub.com" class="hover:text-white">04_HQ</a>
+        </div>
+    </div>
+
+    <article class="max-w-3xl mx-auto px-6">
+        
+        <header class="mb-16 text-center border-b border-white/10 pb-16">
+            <div class="mono text-blue-500 text-xs mb-4 tracking-widest uppercase">// ARCHITECT_PROTOCOL_V1.0</div>
+            <h1 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-none">
+                THE DEATH OF THE <br><span class="text-blue-600">PROMPT ENGINEER</span>
+            </h1>
+            <p class="text-xl text-slate-400 italic max-w-2xl mx-auto leading-relaxed">
+                "Stop asking the AI to 'write a blog post.' Command it to architect a revenue engine."
+            </p>
+        </header>
+
+        <div class="space-y-12 text-lg md:text-xl text-slate-300 leading-relaxed font-medium">
+            <p><span class="text-white font-bold">Most people use AI like a slot machine.</span> They pull the lever (hit enter), hope for a jackpot, and get average results. This is the "Failure Mode" of the modern operator.</p>
+
+            <p>Real Architects use AI like a compiler. They do not ask questions. They input <span class="text-blue-400">First Principles Logic</span>, <span class="text-blue-400">Structural Constraints</span>, and <span class="text-blue-400">Context Variables</span>.</p>
+            
+            <div class="glass-panel p-8 my-12">
+                <h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest border-b border-white/10 pb-2">The 3 Laws of Architecture:</h3>
+                <ul class="space-y-4 mono text-sm text-blue-200">
+                    <li class="flex gap-4"><span class="text-blue-500">01.</span> NEVER PROMPT WITHOUT A ROLE.</li>
+                    <li class="flex gap-4"><span class="text-blue-500">02.</span> NEVER PROMPT WITHOUT A CONSTRAINT.</li>
+                    <li class="flex gap-4"><span class="text-blue-500">03.</span> NEVER ACCEPT THE FIRST OUTPUT.</li>
+                </ul>
+            </div>
+
+            <p>We spent 12 months building a library of 1,000 prompts that adhere strictly to these laws. We call it "The Vault." It removes the human error from the equation entirely.</p>
+            
+            <p>You have two choices: Continue guessing, or start architecting.</p>
+        </div>
+
+        <div class="mt-24 text-center">
+            <div class="inline-block p-[1px] rounded-2xl bg-gradient-to-r from-blue-600 to-blue-400">
+                <a href="https://promptworks.store" class="block bg-black px-12 py-6 rounded-2xl text-white font-black tracking-widest text-lg hover:bg-blue-900/20 transition uppercase">
+                    Access The Vault ->
+                </a>
+            </div>
+            <p class="mt-4 text-xs text-slate-600 mono">Redirecting to Secure Stripe Environment</p>
+        </div>
+
+    </article>
+
+</body>
+</html>

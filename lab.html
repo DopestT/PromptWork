@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lab | ProfitNicheHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-deep: #050505;
+            --card-bg: rgba(20, 20, 20, 0.85);
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981; /* Green for "Success/Free" */
+            --accent-glow: rgba(59, 130, 246, 0.4);
+        }
+        body { 
+            background-color: var(--bg-deep); color: #f8fafc; font-family: 'Inter', sans-serif;
+            background-image: linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-card {
+            background: var(--card-bg); backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-input {
+            background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+        .glow-input:focus { border-color: var(--accent-green); outline: none; box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
+        .nav-link { position: relative; transition: color 0.3s; }
+        .nav-link:hover { color: white; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div class="fixed top-0 w-full z-[100] bg-black/90 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto flex justify-center gap-6 md:gap-12 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+            <a href="#" class="text-green-500 cursor-default">01_The_Lab</a> <a href="https://nicheprofitblueprint.com" class="nav-link hover:text-white">02_Protocol</a>
+            <a href="https://promptworks.store" class="nav-link hover:text-white">03_Vault</a>
+            <a href="https://profitnichehub.com" class="nav-link hover:text-white">04_HQ</a>
+        </div>
+    </div>
+
+    <main class="flex-grow flex items-center justify-center px-4 pt-20">
+        <div class="glass-card p-8 md:p-12 max-w-2xl w-full rounded-3xl relative overflow-hidden border-t-4 border-t-green-500">
+            
+            <div class="flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+                <div class="mono text-[10px] text-green-500 uppercase tracking-widest">>> SYSTEM_ACCESS: GRANTED</div>
+                <div class="flex gap-2">
+                    <div class="w-2 h-2 rounded-full bg-red-500/20"></div>
+                    <div class="w-2 h-2 rounded-full bg-yellow-500/20"></div>
+                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-none tracking-tight">
+                STEAL THE <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">ARCHITECT'S PACK.</span>
+            </h1>
+
+            <p class="text-slate-400 text-lg mb-10 leading-relaxed">
+                Stop guessing. Get the 10 foundational prompts we use to build 6-figure workflows. 
+                This includes the <span class="text-white font-bold">"Zero-Fluff" Filter</span> and the <span class="text-white font-bold">Rapid Strategy Generator</span>.
+            </p>
+
+            <form action="#" class="flex flex-col gap-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <span class="text-slate-500 mono text-xs">></span>
+                    </div>
+                    <input type="email" placeholder="ENTER_OPERATOR_EMAIL" required 
+                           class="glow-input w-full p-4 pl-10 rounded-xl text-white mono text-sm placeholder-slate-600">
+                </div>
+                
+                <button type="submit" class="bg-green-600 hover:bg-green-500 text-black font-black py-5 rounded-xl text-sm tracking-[0.2em] uppercase transition shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)]">
+                    Initialize Download
+                </button>
+            </form>
+
+            <p class="text-[10px] text-slate-600 mt-6 text-center mono">
+                // Free access window closes in 24:00:00. Secure connection established.
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>
