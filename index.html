@@ -1,201 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PromptWorks | 1000 Professional AI Prompts</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #111827; }
-.mono { font-family: 'JetBrains Mono', monospace; }
-.glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); }
-.copy-toast { display:none; position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:#0f172a; color:#f8fafc; padding:14px 28px; border-radius:12px; font-weight:600; box-shadow:0 20px 25px -5px rgba(0,0,0,0.2); z-index:100;}
-.card-hover:hover { transform: translateY(-3px); transition: all 0.3s ease; }
-nav a { color:white; font-weight:600; text-decoration:none;}
-nav a:hover { text-decoration:underline;}
-.affiliate-link { color:#3b82f6; font-weight:600; text-decoration:underline;}
-section { scroll-margin-top:100px;}
-/* Blob animation */
-@keyframes blob { 0%,100% { transform: translate(0px,0px) scale(1); } 33% { transform: translate(30px,-20px) scale(1.05); } 66% { transform: translate(-20px,30px) scale(0.95); } }
-.animate-blob { animation: blob 8s infinite; }
-.animation-delay-2000 { animation-delay: 2s; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptWorks | The Architect's Vault</title>
+    <meta name="description" content="1,000 Professional AI Architectures. Stop prompting. Start commanding.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- OBSIDIAN COMMAND CENTER THEME --- */
+        :root {
+            --bg-deep: #050505;
+            --card-bg: rgba(20, 20, 20, 0.85);
+            --accent-blue: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.4);
+            --text-dim: #94a3b8;
+        }
+
+        html { scroll-behavior: smooth; }
+        
+        body { 
+            background-color: var(--bg-deep); 
+            color: #f8fafc; 
+            font-family: 'Inter', sans-serif;
+            /* Blueprint Grid Overlay */
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        /* UI COMPONENTS */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 30px var(--accent-glow);
+            transform: translateY(-4px);
+        }
+
+        .glow-btn {
+            background: var(--accent-blue);
+            box-shadow: 0 0 25px var(--accent-glow);
+            transition: all 0.3s ease;
+        }
+        .glow-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 50px var(--accent-blue);
+        }
+
+        /* ANIMATIONS */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee { animation: marquee 30s linear infinite; }
+
+        /* NAVIGATION STYLES */
+        .architect-nav a {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .architect-nav a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+            background: var(--accent-blue); transition: width 0.3s ease;
+        }
+        .architect-nav a:hover::after { width: 100%; }
+        
+        /* COPY TOAST */
+        .copy-toast {
+            display: none; position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            background: var(--accent-blue); color: white; padding: 12px 24px; border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace; font-size: 12px; z-index: 100;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+    </style>
 </head>
-<body class="selection:bg-blue-100">
+<body class="selection:bg-blue-600/30">
 
-<!-- Discount & Launch Banners -->
-<div class="bg-emerald-600 text-white py-3 px-4 text-center text-[10px] md:text-sm font-extrabold tracking-widest uppercase sticky top-0 z-[60]">
-🔥 10% Discount Applied — Today Only
-</div>
-<div class="bg-blue-600 text-white py-3 px-4 text-center text-[10px] md:text-sm font-extrabold tracking-widest uppercase sticky top-[32px] z-50">
-🚀 LAUNCH SPECIAL: Get the full 1,000 Prompt Collection — Now 10% Off
-</div>
+    <div id="copyToast" class="copy-toast">>> COMMAND_COPIED_TO_CLIPBOARD</div>
 
-<div id="copyToast" class="copy-toast italic">Copied to clipboard!</div>
-
-<!-- NAVIGATION -->
-<nav class="p-6 flex justify-between items-center max-w-7xl mx-auto glass sticky top-[80px] z-40 rounded-b-3xl border-x border-b border-slate-100">
-  <div class="text-xl font-extrabold tracking-tighter text-slate-900 flex items-center gap-2">
-    <span class="bg-blue-600 text-white px-2 py-0.5 rounded">PW</span> PromptWorks
-  </div>
-  <div class="hidden md:flex gap-8 text-sm font-bold text-slate-500">
-    <a href="#samples" class="hover:text-blue-600 transition">Samples</a>
-    <a href="#things-i-use" class="hover:text-blue-600 transition">Tools & Services</a>
-    <a href="#affiliates" class="hover:text-blue-600 transition">Affiliates</a>
-    <a href="#ads" class="hover:text-blue-600 transition">Ads</a>
-    <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
-  </div>
-  <a href="YOUR_CHECKOUT_LINK" class="bg-emerald-600 text-white px-5 py-2 rounded-full font-bold hover:bg-emerald-700 transition-all text-xs shadow-lg">Get PromptWorks — 10% Off</a>
-</nav>
-
-<!-- HERO -->
-<header class="relative max-w-7xl mx-auto px-6 py-20 lg:py-32 text-center bg-gradient-to-b from-blue-600 to-indigo-600 rounded-3xl shadow-xl">
-  <h1 class="text-5xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight text-white">
-    Sophisticated AI.<br>
-    <span class="text-yellow-300">Zero Fluff.</span>
-  </h1>
-  <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-12">
-    Stop prompting. Start architecting. 1,000 precision prompts built with placeholders + constraints for elite output quality.
-  </p>
-  <div class="flex flex-col sm:flex-row justify-center gap-4">
-    <a href="YOUR_CHECKOUT_LINK" class="bg-yellow-400 text-blue-900 px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-yellow-300 shadow-xl transition-all hover:-translate-y-1">
-      Download the Collection — 10% Off
-    </a>
-    <a href="#samples" class="bg-white text-blue-900 border border-slate-200 px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-blue-50 transition">
-      View Samples
-    </a>
-  </div>
-</header>
-
-<!-- META PROMPT -->
-<section class="max-w-5xl mx-auto px-6 mb-32">
-<div class="bg-slate-950 rounded-[2.5rem] p-8 lg:p-12 shadow-3xl border border-slate-800 relative overflow-hidden">
-<div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full"></div>
-<div class="flex flex-col lg:flex-row gap-10 items-center relative z-10">
-<div class="lg:w-1/2">
-<h2 class="text-3xl font-black text-white mb-4">Step 0: Prime the AI</h2>
-<p class="text-slate-400 leading-relaxed mb-6 italic">"The prompt that makes all other prompts work."</p>
-</div>
-<div class="lg:w-1/2 w-full">
-<div class="relative group">
-<pre id="metaPrompt" class="mono text-[12px] leading-relaxed bg-black p-6 rounded-2xl border border-slate-800 text-blue-300 whitespace-pre-wrap">Act as a professional collaborator using the 1000 AI Prompts framework. Resolve placeholders in {brackets} and adhere to constraints. Deliver rigorous, actionable insights without fluff.</pre>
-<button onclick="copyMetaPrompt()" class="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-blue-500 transition">Copy Primer</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- SAMPLES -->
-<section id="samples" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
-<h2 class="text-4xl font-black text-center mb-12">Sample Prompts</h2>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-<h3 class="text-xl font-bold mb-4">Strategy</h3>
-<p class="text-sm mono text-slate-600">“Develop a {90-day roadmap} for {product} targeting {audience}. Include constraints: {budget}, {team size}.”</p>
-</div>
-<div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-<h3 class="text-xl font-bold mb-4">Automation</h3>
-<p class="text-sm mono text-slate-600">“Create an automation workflow connecting {tool A} with {tool B}. Include constraints: {trigger}, {fallback}.”</p>
-</div>
-<div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover">
-<h3 class="text-xl font-bold mb-4">Content Engine</h3>
-<p class="text-sm mono text-slate-600">“Generate a 30-day content calendar for {audience} using {pillar 1}, {pillar 2}, and {CTA}. Output table format.”</p>
-</div>
-</div>
-</section>
-
-<!-- TOOLS & SERVICES (Premium Hero Style) -->
-<section id="things-i-use" class="relative max-w-7xl mx-auto px-6 py-32 rounded-3xl overflow-hidden">
-  <!-- Background shapes -->
-  <div class="absolute -top-32 -left-32 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl animate-blob"></div>
-  <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-indigo-300/30 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-  <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-yellow-300/20 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl"></div>
-
-  <div class="relative z-10 text-center">
-    <h2 class="text-5xl font-extrabold text-blue-900 mb-4">Tools & Services I Personally Use</h2>
-    <p class="text-lg text-blue-800 max-w-2xl mx-auto mb-16">
-      These are the platforms and AI tools I rely on every day to get results faster, smarter, and with precision. Click to explore each one.
-    </p>
-
-    <div class="grid md:grid-cols-3 gap-12">
-      <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-2 cursor-pointer">
-        <h3 class="text-xl font-bold mb-3 text-blue-700">Pictory</h3>
-        <p class="text-slate-600 mb-4">AI video editor that turns scripts into professional videos in minutes.</p>
-        <a href="YOUR_AFFILIATE_LINK" class="text-blue-600 font-bold hover:text-blue-800">Get Pictory →</a>
-      </div>
-      <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-2 cursor-pointer">
-        <h3 class="text-xl font-bold mb-3 text-blue-700">Zapier</h3>
-        <p class="text-slate-600 mb-4">Automate your workflows connecting all your favorite tools seamlessly.</p>
-        <a href="YOUR_AFFILIATE_LINK" class="text-blue-600 font-bold hover:text-blue-800">Get Zapier →</a>
-      </div>
-      <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-2 cursor-pointer">
-        <h3 class="text-xl font-bold mb-3 text-blue-700">Webflow</h3>
-        <p class="text-slate-600 mb-4">No-code website builder to design beautiful, responsive sites fast.</p>
-        <a href="YOUR_AFFILIATE_LINK" class="text-blue-600 font-bold hover:text-blue-800">Get Webflow →</a>
-      </div>
-      <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-2 cursor-pointer">
-        <h3 class="text-xl font-bold mb-3 text-blue-700">ConvertKit</h3>
-        <p class="text-slate-600 mb-4">Email marketing platform to engage your audience and grow your business.</p>
-        <a href="YOUR_AFFILIATE_LINK" class="text-blue-600 font-bold hover:text-blue-800">Get ConvertKit →</a>
-      </div>
-      <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-2 cursor-pointer">
-        <h3 class="text-xl font-bold mb-3 text-blue-700">Hostinger</h3>
-        <p class="text-slate-600 mb-4">Reliable web hosting with excellent speed and support.</p>
-        <a href="YOUR_AFFILIATE_LINK" class="text-blue-600 font-bold hover:text-blue-800">Get Hostinger →</a>
-      </div>
-      <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-2 cursor-pointer">
-        <h3 class="text-xl font-bold mb-3 text-blue-700">Writesonic</h3>
-        <p class="text-slate-600 mb-4">AI writing assistant to craft copy, blogs, and content faster.</p>
-        <a href="YOUR_AFFILIATE_LINK" class="text-blue-600 font-bold hover:text-blue-800">Get Writesonic →</a>
-      </div>
+    <div class="fixed top-0 w-full z-[100] bg-black/90 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto flex justify-center gap-6 md:gap-12 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 architect-nav px-4">
+            <a href="https://profitnichehub.online" class="hover:text-white">01_The_Lab</a>
+            <a href="https://nicheprofitblueprint.com" class="hover:text-white">02_Protocol</a>
+            <a href="#" class="text-blue-500 cursor-default">03_Vault</a> <a href="https://profitnichehub.com" class="hover:text-white">04_HQ</a>
+        </div>
     </div>
-  </div>
-</section>
 
-<!-- AFFILIATE PROGRAM -->
-<section id="affiliates" class="max-w-5xl mx-auto px-6 py-24 text-center">
-<h2 class="text-4xl font-black mb-6">Affiliate Program</h2>
-<p class="text-gray-700 mb-6 text-lg">Earn <span class="font-bold text-blue-600">35% commissions</span> promoting PromptWorks products. Instant approval, 30-day cookie, monthly payouts.</p>
-<a href="mailto:partners@promptworks.store" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 transition shadow-md">Apply Now → 35% Commission</a>
-</section>
+    <header class="relative max-w-7xl mx-auto px-6 pt-32 pb-24 text-center mt-10">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] md:w-[800px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full -z-10"></div>
+        
+        <div class="inline-block px-4 py-1.5 mb-8 glass-card rounded-full border-blue-500/30">
+            <span class="text-blue-400 text-[10px] font-black tracking-[0.3em] uppercase">System: Operational // Status: Root Access</span>
+        </div>
 
-<!-- AD MAPPING SECTION -->
-<section id="ads" class="max-w-7xl mx-auto px-6 py-24 bg-gray-50 rounded-3xl">
-  <h2 class="text-4xl font-extrabold text-center mb-12 text-slate-900">Ad Mapping & Sponsored Slots</h2>
-  <p class="text-center text-lg text-slate-700 max-w-3xl mx-auto mb-16">
-    Explore curated AI products, tools, and services. Each slot below can be a sponsor, affiliate, or featured offering. Click to learn more.
-  </p>
+        <h1 class="text-6xl md:text-[9rem] font-black mb-6 leading-[0.9] tracking-tighter text-white">
+            STOP ASKING. <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-blue-700 drop-shadow-[0_0_35px_rgba(59,130,246,0.5)]">COMMAND.</span>
+        </h1>
 
-  <div class="grid md:grid-cols-3 gap-8">
-    <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer border border-slate-200">
-      <span class="text-xs font-bold text-emerald-600 uppercase mb-2 block">Sponsored</span>
-      <h4 class="text-xl font-bold mb-3 text-slate-900">AI Video Suite</h4>
-      <p class="text-slate-600 text-sm mb-4">Complete AI video editing platform for creators and marketers.</p>
-      <a href="mailto:ads@promptworks.store" class="text-blue-600 font-bold hover:text-blue-800">Sponsor This →</a>
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 font-medium leading-relaxed border-l-2 border-blue-600/40 pl-6 text-left md:text-center">
+            The generic prompt is a failure mode. Deploy 1,000 precision architectures built on <span class="text-white">First Principles Logic</span> and <span class="text-white">Structural Rigor</span>.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-6 mb-20">
+            <a href="#pricing" class="glow-btn px-10 py-5 rounded-xl text-lg font-bold text-white tracking-wide">
+                Access The Vault — $29
+            </a>
+            <a href="#samples" class="glass-card px-10 py-5 rounded-xl text-lg font-bold text-slate-300 hover:bg-white/5 transition">
+                View Logic Samples
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+            <div class="p-6 rounded-2xl border border-white/5 opacity-40 blur-[1px] select-none bg-black/50">
+                <div class="text-[10px] mono uppercase text-red-500 mb-2">// Generic Input</div>
+                <p class="text-slate-500 italic">"Write a marketing plan for my coffee shop."</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl border-blue-500/40 shadow-2xl shadow-blue-500/10 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition">
+                    <button class="bg-blue-600 text-[10px] px-2 py-1 rounded text-white" onclick="copyMeta()">COPY</button>
+                </div>
+                <div class="text-[10px] mono uppercase text-blue-400 mb-2">// Architect Input</div>
+                <p id="metaPrompt" class="text-sm mono text-blue-100 leading-relaxed">
+                    <span class="text-blue-500">[Role: Senior Strategist]</span> + <br>
+                    <span class="text-slate-400">{market_context}</span> + <br>
+                    <span class="text-blue-500">[Constraint: Zero Fluff]</span>...
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <div class="border-y border-white/5 py-6 bg-black/50 backdrop-blur-sm mb-24 overflow-hidden">
+        <div class="flex whitespace-nowrap animate-marquee">
+            <div class="flex gap-16 items-center px-8 text-slate-500 font-black text-xs tracking-widest uppercase">
+                <span>[Engineering_Vault]</span>
+                <span>[SWOT_Analysis]</span>
+                <span>[Root_Cause_5Why]</span>
+                <span>[Growth_Hacking]</span>
+                <span>[Legal_Constraints]</span>
+                <span>[Python_Automation]</span>
+                <span>[Copywriting_Hooks]</span>
+                <span>[System_Architecture]</span>
+            </div>
+            <div class="flex gap-16 items-center px-8 text-slate-500 font-black text-xs tracking-widest uppercase">
+                <span>[Engineering_Vault]</span>
+                <span>[SWOT_Analysis]</span>
+                <span>[Root_Cause_5Why]</span>
+                <span>[Growth_Hacking]</span>
+                <span>[Legal_Constraints]</span>
+                <span>[Python_Automation]</span>
+                <span>[Copywriting_Hooks]</span>
+                <span>[System_Architecture]</span>
+            </div>
+        </div>
     </div>
-    <div class="bg-gradient-to-br from-purple-100 to-purple-200 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer border border-slate-200">
-      <span class="text-xs font-bold text-indigo-600 uppercase mb-2 block">Featured</span>
-      <h4 class="text-xl font-bold mb-3 text-slate-900">Automation Toolkit</h4>
-      <p class="text-slate-600 text-sm mb-4">All-in-one automation workflows for AI, SaaS, and marketing systems.</p>
-      <a href="#" class="text-blue-600 font-bold hover:text-blue-800">Learn More →</a>
-    </div>
-    <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer border border-slate-200">
-      <span class="text-xs font-bold text-yellow-500 uppercase mb-2 block">Sponsored</span>
-      <h4 class="text-xl font-bold mb-3 text-slate-900">AI Content Bundle</h4>
-      <p class="text-slate-600 text-sm mb-4">Curated AI tools for copywriting, content creation, and SEO.</p>
-      <a href="#" class="text-blue-600 font-bold hover:text-blue-800">Explore →</a>
-    </div>
-    <div class="bg-gradient-to-br from-green-100 to-green-200 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer border border-slate-200">
-      <span class="text-xs font-bold text-green-600 uppercase mb-2 block">Featured</span>
-      <h4 class="text-xl font-bold mb-3 text-slate-900">Webflow Templates</h4>
-      <p class="text-slate-600 text-sm mb-4">Pre-designed templates for Webflow to accelerate website launches.</p>
-      <a href="#" class="text-blue-600 font-bold hover:text-blue-800">Check Templates →</a>
-    </div>
-    <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 cursor-pointer border border-slate-200">
-      <span class="text-xs font-bold text-red-500 uppercase mb-2 block">Sponsored</span>
-      <h4 class="text-xl font-bold mb-3 text-slate-900">Email Mastery</h4>
-      <p class="text-slate-600 text-sm mb-4">Grow your email list with proven AI-assisted strategies and tools.</p>
-      <a href="#" class="text
+
+    <section id="pricing" class="max-w-7xl mx-auto px-6 py-12 mb-32">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black mb-4 text-white">SELECT CLEARANCE LEVEL</h2>
+            <p class="text-slate-500 mono text-xs uppercase tracking-widest">Secure Stripe Checkout // Instant Access</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+            
+            <div class="glass-card p-8 rounded-[2rem] flex flex-col border border-white/5 hover:border-blue-500/30 transition">
+                <h3 class="mono text-slate-400 text-xs mb-4 uppercase tracking-widest">// The Architect</h3>
+                <div class="text-5xl font-black mb-6 text-white">$29</div>
+                <ul class="text-sm text-slate-400 space-y-4 mb-8 flex-grow">
+                    <li class="flex gap-3 items-center"><span class="text-blue-500">✓</span> 1,000 Professional Prompts</li>
+                    <li class="flex gap-3 items-center"><span class="text-blue-500">✓</span> First Principles Framework</li>
+                    <li class="flex gap-3 items-center"><span class="text-blue-500">✓</span> Instant PDF Access</li>
+                </ul>
+                <a href="https://buy.stripe.com/4gMdRb1Nv2Ke3bEgL3bAs00" class="glass-card py-4 text-center rounded-xl font-bold text-white hover:bg-white/10 transition border border-white/10">
+                    Initialize Download
+                </a>
+            </div>
+
+            <div class="glass-card p-8 rounded-[2rem] border-blue-600 border-2 relative scale-105 shadow-[0_0_50px_rgba(59,130,246,0.2)] bg-black/80 flex flex-col">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-widest shadow-lg shadow-blue-600/50">Recommended</div>
+                <h3 class="mono text-blue-400 text-xs mb-4 uppercase tracking-widest">// The Strategist</h3>
+                <div class="text-5xl font-black mb-6 text-white">$59</div>
+                <ul class="text-sm text-slate-300 space-y-4 mb-8 flex-grow">
+                    <li class="font-bold text-white flex gap-3 items-center"><span class="text-blue-400">✓</span> Everything in Architect</li>
+                    <li class="flex gap-3 items-center"><span class="text-blue-400">✓</span> Secret Root-Access Chain</li>
+                    <li class="flex gap-3 items-center"><span class="text-blue-400">✓</span> Video Workflow Vault</li>
+                    <li class="flex gap-3 items-center"><span class="text-blue-400">✓</span> Priority Updates</li>
+                </ul>
+                <a href="#" onclick="alert('Strategist Tier opening soon. Please use Architect Tier.')" class="glow-btn py-4 text-center rounded-xl font-bold text-white block hover:scale-105 transition">
+                    Get Pro Bundle
+                </a>
+            </div>
+
+            <div class="glass-card p-8 rounded-[2rem] flex flex-col opacity-60 hover:opacity-100 transition duration-500 border border-white/5">
+                <h3 class="mono text-slate-400 text-xs mb-4 uppercase tracking-widest">// The Enterprise</h3>
+                <div class="text-5xl font-black mb-6 text-white">$249</div>
+                <ul class="text-sm text-slate-400 space-y-4 mb-8 flex-grow">
+                    <li class="flex gap-3 items-center"><span class="text-slate-500">✓</span> Full Team License</li>
+                    <li class="flex gap-3 items-center"><span class="text-slate-500">✓</span> 1:1 Architecture Call</li>
+                    <li class="flex gap-3 items-center"><span class="text-slate-500">✓</span> Custom Logic Design</li>
+                </ul>
+                <a href="https://profitnichehub.com" class="glass-card py-4 text-center rounded-xl font-bold text-slate-300 hover:text-white hover:bg-white/10 transition border border-white/10">
+                    Application Only
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="border-t border-white/5 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-slate-500 text-[10px] mono uppercase tracking-widest">
+                © 2026 PromptWorks.store // Secured by Stripe
+            </div>
+            <div class="flex gap-8">
+                <a href="https://profitnichehub.online" class="text-slate-500 text-[10px] font-bold uppercase hover:text-blue-400 transition">Partner Login (35%)</a>
+                <a href="mailto:support@promptworks.store" class="text-slate-500 text-[10px] font-bold uppercase hover:text-white transition">Support Frequency</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showToast() {
+            const toast = document.getElementById('copyToast');
+            toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 2000);
+        }
+        function copyMeta() {
+            const text = document.getElementById('metaPrompt').innerText;
+            navigator.clipboard.writeText(text).then(showToast);
+        }
+    </script>
+</body>
+</html>
