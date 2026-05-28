@@ -40,21 +40,26 @@
             outline: none; 
             box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); 
         }
-        .nav-link { 
-            position: relative; 
-            transition: color 0.3s; 
+        /* NAVIGATION STYLES */
+        .architect-nav a {
+            position: relative;
+            transition: color 0.3s ease;
         }
-        .nav-link:hover { color: white; }
+        .architect-nav a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+            background: var(--accent-green); transition: width 0.3s ease;
+        }
+        .architect-nav a:hover::after { width: 100%; }
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
 
     <div class="fixed top-0 w-full z-[100] bg-black/90 backdrop-blur-md border-b border-white/5 py-3">
-        <div class="max-w-7xl mx-auto flex justify-center gap-6 md:gap-12 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+        <div class="max-w-7xl mx-auto flex justify-center gap-6 md:gap-12 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 architect-nav px-4">
             <span class="text-green-500 cursor-default">01_The_Lab</span>
-            <a href="https://nicheprofitblueprint.com" class="nav-link hover:text-white">02_Protocol</a>
-            <a href="https://promptworks.store" class="nav-link hover:text-white">03_Vault</a>
-            <a href="https://profitnichehub.com" class="nav-link hover:text-white">04_HQ</a>
+            <a href="https://nicheprofitblueprint.com" class="hover:text-white">02_Protocol</a>
+            <a href="https://promptworks.store" class="hover:text-white">03_Vault</a>
+            <a href="https://profitnichehub.com" class="hover:text-white">04_HQ</a>
         </div>
     </div>
 
